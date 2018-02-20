@@ -1,0 +1,187 @@
+#login {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  
+  .login-wrapper {
+    border: 1px solid #babbbb;
+    margin-top: 50px;
+    padding: 2%;
+    background: #f8fcff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .login-panel {
+    width: 468px;
+    margin: auto;
+    align-self: center;
+  }
+  .login-form {
+    width: 380px;
+    margin: auto;
+  }
+  .login-form .ant-col-xs-24{
+    width: 100% !important;
+  }
+  .login-form input{
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 0 !important;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 21px;
+    
+    color: #394158;
+  }
+  .login-form input:focus{
+    border-bottom: 1px solid #ddd !important;
+    box-shadow: none;
+  }
+  .login-form input:-webkit-autofill{
+    background-color: transparent !important;
+  }
+
+  .login-form-button {
+    width: 100%;
+  }
+  .forgot-form-button {
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border-color: black;
+  }
+
+  .login-logo {
+    width: 116px;
+    height: auto;
+    margin: auto;
+    display: block;
+    padding-top: 146px;
+    // margin-top: 150px;
+  }
+}
+#signup{
+  height: 100vh;
+  width: auto;
+}
+.signup {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .signup-dialog{    
+    width: 1000px;
+    height: 100%;
+    margin-left: 450px;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    // background-color: red;
+
+    .signup-title {
+      padding-top: 100px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 28px;
+      text-align: center;
+    
+      color: rgba(0, 0, 0, 1);
+    }
+    .signup-close {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: 1243px;
+      top: 88px;
+    }
+    .signup-help {
+      margin-top: 20px;  
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 29px;
+      font-size: 20px;
+      text-align: center;  
+      color: rgba(0, 0, 0, 1);
+    }
+    .signup-wrapper {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      .ant-form-item {
+        width:300px;
+        label {
+          font-family: Arial;
+          font-style: normal;
+          font-weight: normal;
+          line-height: normal;
+          font-size: 17px;
+          color: #CCCBCB;
+        }
+        input {
+          font-family: Arial;
+          font-style: normal;
+          font-weight: bold;
+          line-height: normal;
+          font-size: 21px;
+
+          color: #394158;
+        }
+      }
+    }
+
+  }
+
+  .term1{
+    text-align: center;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: center;
+    
+    color: #BCBBC3;
+    b {
+      font-size: 18px;
+      color: rgb(38, 140, 236);
+    }
+  }
+  .signup-form .ant-col-xs-24{
+    width: 100% !important;
+    padding-left:10px; 
+  }
+  .signup-form input{
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 0 !important;
+  }
+  .signup-form input:focus{
+    border-bottom: 1px solid #ddd !important;
+    box-shadow: none;
+  }
+  .signup-form input:-webkit-autofill{
+    background-color: transparent !important;
+  }
+}
+.register-button {
+  width:180px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 220px;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 19px;
+  font-size: 18px;
+  text-align: center;
+
+  color: #FFFFFF;
+}

@@ -1,0 +1,789 @@
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: normal;
+  src: url("shared/fonts/Comfortaa/Comfortaa-Light.ttf") format("truetype");
+}
+
+.circle {
+  border-radius: 50%;
+	width: 14px;
+  height: 14px;
+  
+  &.online {
+    background: green;
+  }
+  &.offline {
+    background: silver;
+  }
+}
+
+.is-right {
+  float: right;
+}
+
+.container {
+  background: #fff;
+  padding: 2%;
+  min-height: 360px;
+  margin-top: 5px;
+}
+
+.input-button-suffix {
+  .ant-input-suffix {
+    right: 0;
+  }
+}
+
+.tag-wrapper {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  .button-new-tag {
+    background: #fff;
+    border-style: dashed;
+  }
+}
+
+.logo {
+  height: 60px;
+  width: 120px;
+  padding: 15px;
+  
+  .ic-logo {
+    display: flex;
+    margin: auto;
+    width: 82px;
+    height: 25px;
+    background-size: contain;
+    background-image: url(../src/shared/img/logo.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+.is-fullheight {
+  height: 100%;
+}
+
+.main-layout {
+  height: 100vh;
+
+  .ant-layout-content {
+    margin: 24px 16px 0;
+  }
+}
+
+.custom-switch {
+  .ant-row.ant-form-item {
+    display: flex;
+    align-items: center;
+  }
+  .ant-form-item-label {
+    padding: 0;
+  }
+}
+// Side bar style
+.left-menu-items {
+  height: 103px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.div-left-menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  .notify {
+    width: 23px;
+    height:12px;
+    background: #1A9FFF;
+    border-radius: 6px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    
+    color: #FFFFFF;
+  }
+}
+
+.ic-requests {
+  width: 26px;
+  height: auto;
+
+}
+
+// second side bar style
+.second-sidebar {
+  width:200px;
+}
+
+//Request screen
+.request-screen {
+  display: flex;
+  height: auto;
+}
+.request-search {
+  width:280px;
+  // background: #FFFFFF;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+}
+.search-input {
+  margin-top: 15px;
+  margin-left: 13px;
+  margin-right: 13px;
+  input{
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.3px solid #BDC3D0;
+    box-sizing: border-box;
+    border-radius: 59px;
+    /* transform: rotate(-180deg); */
+    padding: 6px 39px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 13px;
+    color: #3F4257;
+    outline: none;
+  }
+}
+.search-list {
+  width:100%;
+  .search-item {
+    width: 266px;
+    height: 58px; 
+    margin-left:13px;
+    margin-right:13px;
+    margin-top: 20px;
+    background: #F9F9F9;
+    .company-info {
+      display: flex;
+      .company-name {
+        width: 164px;
+        font-family: Arial;
+        line-height: normal;
+        font-size: 15px;
+        color: #394158;
+      }
+      .time {
+        width:80px;
+        margin-left:10px;
+        font-family: ArialMT;
+        line-height: normal;
+        font-size: 12px;
+        text-align: right;
+        color: #BCBBC3;
+      }
+    }
+    .product-name {
+      margin-top:8px;
+      font-family: ArialMT;
+      line-height: normal;
+      font-size: 12px;
+
+      color: #3F4257;
+    }
+    .delivery {
+      margin-top:4px;
+      font-family: ArialMT;
+      line-height: normal;
+      font-size: 12px;
+
+      color: #BCBBC3;
+    }
+  }
+}
+
+.request-content {
+  width: 100%;
+  .request-content-header{
+    display: flex;
+    height:97px;
+    background: white;
+    .image {
+      width: 59px;
+      height: 59px;
+      margin-left: 28px;
+      margin-top:24px;
+    }
+    .groupname {
+      width: 220px;
+      height: 36px;
+      margin-left: 15px;
+      margin-top: 30px;
+      .group {
+        height: 18px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 15px;
+
+        color: #394158;
+      }
+      .project {
+        height: 14px;
+        margin-top:4px;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 12px;
+
+        color: #3F4257;
+      }
+    }
+    .delivery {
+      margin-left: 5px;
+      margin-top: 30px;
+      width: 250px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 14px;
+      color: #BCBBC3;
+    }
+    .payment {
+      margin-left: 5px;
+      margin-top: 30px;
+      width: 280px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 14px;
+      color: #BCBBC3;
+    }
+  }
+  .colors-paint {
+    height:23px;
+    width: 100%;
+    background: #F6F7F8;
+    border: 0.75px solid #E6E6E6;
+    .data {
+      margin-top: 4px;
+      margin-bottom: 4px;
+      margin-left: 41px;
+      box-sizing: border-box;
+      font-family: ArialMT;
+      line-height: normal;
+      font-size: 12px;
+  
+      color: #BCBBC3;
+
+    }
+  }
+  .content-list {
+    background: white;
+    padding-top: 12px;
+    .content-item {
+      height: 107px;
+      display: flex;
+      .image-item{
+        .image {
+          margin-left: 48px;
+          margin-top: 12px;
+          width: 70px;
+          height: 78px;
+          border: 1px solid #F5F6F8;
+          box-sizing: border-box;
+          border-radius: 3px;
+        }
+        .count {
+          width: 28px;
+          height: 12px;
+          margin-left: 70px;
+          margin-top: 2px;
+          border-radius: 6px;
+          border: 0.75px solid  #FFAA09;
+          
+          font-family: Arial;
+          line-height: normal;
+          font-size: 10px;
+          text-align: center;
+          
+          color: #FFAA09;
+
+        }
+      }
+      .item-name {
+        width: 133px;
+        margin-left: 24px;
+        margin-top: 31px;
+        .name {
+          font-family: Arial;
+          font-style: normal;
+          font-weight: bold;
+          line-height: normal;
+          font-size: 18px;
+
+          color: #394158;
+        }
+        .group {
+          font-family: ArialMT;
+          line-height: normal;
+          font-size: 13px;
+
+          color: #3F4257;
+        }
+      }
+      .item-size {
+        width: 100px;
+        height: 88px;
+        margin-top: 25px;
+        margin-left: 30px;
+        font-family: Arial;
+        font-style: normal;
+        line-height: 22px;
+        font-size: 14px;
+        color: #BCBBC4;
+      }
+      .out-stock {
+        width: 98px;
+        margin-left: 77px;
+        margin-top: 37px;
+
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 34px;
+        font-size: 14px;
+
+        color: #BCBBC4;
+      }
+      .circle {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        margin-top: 50px;
+        border-radius: 11px;
+        border: 1px solid #BDC3D0;
+      }
+      .price-total {
+        display: flex;
+        width: 397px;
+        height: 86px;
+        margin-left: 30px;
+        background: #F5F6F8;
+        border: 1px solid #E7E7E7;
+        box-sizing: border-box;
+        .divider{
+          width: 3px;
+          height: 85px;
+          border: 1px solid #E7E7E7;
+        }
+        .price {
+          margin-top: 11px;
+          margin-left: 21px;
+          width:170px;
+          font-family: Arial;
+          font-style: normal;
+          font-weight: bold;
+          line-height: 26px;
+          font-size: 17px;
+          
+          color: #394158;
+          .price-val {
+            margin-top: 8px;
+            width: 126px;
+            height: 27px;
+            padding: 5px 18px;
+            border-radius: 13px;
+            border: 1px solid #BDC3D0;
+            font-family: ArialMT;
+            line-height: normal;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: center;
+            
+            color: #B4BAC1;
+          }
+          .total-val {
+            font-weight: normal;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-layout-content {
+  margin: 0 !important;
+}
+
+.ant-layout-sider {
+  max-width: 120px !important;
+  min-width: 120px !important;
+  flex: 0 0 120px;
+  background: white;
+}
+.form-fields {
+  padding: 24px;
+  padding-bottom: 12px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.is-danger {
+  color: red;
+}
+
+.couldinary {
+  display: flex;
+  flex-wrap: wrap;
+
+  .couldinary-img {
+    width: 104px;
+    height: 104px;
+  }
+}
+
+.ant-notification-notice {
+  .ant-notification-notice-content {
+    max-height: 400px;
+    overflow: auto;
+  }
+}
+
+
+///////////////////////////////////////Setting
+.setting {
+  height: 750px;
+  width: 1280px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  background: white;
+  .react-tabs__tab-list {
+    border: none;
+    margin: auto;
+    width: 750px;
+    padding-top: 40px;
+}
+  .react-tabs__tab {
+    width: 250px;
+    height: 44px;
+    text-align: center;
+    border: none;
+    border-bottom: 4px solid rgba(141, 141, 141,0.2);
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 17px;
+    text-align: center;
+    
+    color: #BCBBC3;
+    outline: none;
+  }
+  .react-tabs__tab--selected{
+    width: 250px;
+    height: 44px;
+    text-align: center;
+    border-bottom: 4px solid #1A9FFF;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 17px;
+    text-align: center;
+
+    color: #394158;
+  }
+}
+
+//////////////////////////////////////company setting///////////////////////////
+.company-setting {
+  display: flex;
+  margin: auto;
+  width: 900px;
+  padding-top: 80px;
+  .company-logo {
+    width: 250px;
+    margin-top: 30px;
+    text-align: center;
+    .help {
+      margin-bottom: 20px;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 21px;
+      font-size: 16px;
+      text-align: center;
+
+      color: #B4BAC1;
+    }
+    p {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 25px;
+
+      color: #394158;
+    }
+    .company-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 70px;
+    }
+    .edit {
+      width: 58px;
+      height: 58px;
+      border-radius: 29px;
+      margin-left: -40px;
+      margin-top: 78px;
+    }
+  }
+  .company-details {
+    width: 700px;
+    margin-left: 100px;
+    .ant-form-item {
+      width:300px;
+    }
+    .signup-form .ant-col-xs-24{
+      width: 100% !important;
+      padding-left:10px; 
+      label{
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 17px;
+        
+        color: #CCCBCB;
+  
+      }
+    }
+    .signup-form input{
+      border: none !important;
+      border-bottom: 1px solid #ddd !important;
+      border-radius: 0 !important;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 21px;
+
+      color: #394158;
+    }
+    .signup-form input:focus{
+      border-bottom: 1px solid #ddd !important;
+      box-shadow: none;
+    }
+    .signup-form input:-webkit-autofill{
+      background-color: transparent !important;
+    }
+  }
+  .ant-form-item-control {
+    text-align: center;
+  }
+  .save-button {
+    width: 189px;
+    height: 48px;
+    margin-top: 50px;
+
+    background: #16C360;
+    border-color: transparent;
+    border-radius: 7px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}
+///////////////////////////Cpmpany password///////////////////////////
+  .company-password {
+    display: flex;
+    margin: auto;
+    width: 900px;
+    padding-top:80px;
+    justify-content: center;
+
+    .ant-form-item {
+      width:500px;
+    }
+    .password-form .ant-col-xs-24{
+      width: 100% !important;
+      label{
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 17px;
+        
+        color: #CCCBCB;
+  
+      }
+    }
+    .password-form input{
+      border: none !important;
+      border-bottom: 1px solid #ddd !important;
+      border-radius: 0 !important;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 21px;
+
+      color: #394158;
+    }
+    .signup-form input:focus{
+      border-bottom: 1px solid #ddd !important;
+      box-shadow: none;
+    }
+    .signup-form input:-webkit-autofill{
+      background-color: transparent !important;
+    }
+    .ant-form-item-control {
+      text-align: center;
+    }
+  .save-button {
+    width: 189px;
+    height: 48px;
+    margin-top: 50px;
+
+    background: #16C360;
+    border-color: transparent;
+    border-radius: 7px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}
+
+///////////////////////////Cpmpany Payment////////////////////////////
+.company-payment {
+  display: flex;
+  margin: auto;
+  width: 900px;
+  padding-top: 80px;
+  justify-content: center;
+  .company-logo {
+    width: 220px;
+    margin-top: 30px;
+    text-align: center;
+    p {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 18px;
+      text-align: center;
+
+      color: #394158;
+    }
+    .visa-img {
+      width: 210px;
+      height: 102px;
+    }
+    .paypal-img {
+      width: 210px;
+      height: 102px;
+      margin-top: 78px;
+    }
+  }
+  .company-details {
+    width: 650px;
+    margin-left: 100px;
+    .ant-form-item {
+      width:300px;
+    }
+    .signup-form .ant-col-xs-24{
+      width: 100% !important;
+      padding-left:10px; 
+      label{
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 17px;
+        
+        color: #CCCBCB;
+  
+      }
+    }
+    .signup-form input{
+      border: none !important;
+      border-bottom: 1px solid #ddd !important;
+      border-radius: 0 !important;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 21px;
+
+      color: #394158;
+    }
+    .signup-form input:focus{
+      border-bottom: 1px solid #ddd !important;
+      box-shadow: none;
+    }
+    .signup-form input:-webkit-autofill{
+      background-color: transparent !important;
+    }
+    .signup-form .exp{
+      .ant-form-item {
+        width:150px;
+      }
+    }
+  }
+  .ant-form-item-control {
+    text-align: center;
+  }
+  .save-button {
+    width: 189px;
+    height: 48px;
+    margin-top: 50px;
+
+    background: #16C360;
+    border-color: transparent;
+    border-radius: 7px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 19px;
+    font-size: 18px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+}
