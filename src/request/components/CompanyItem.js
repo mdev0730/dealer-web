@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const CompanyItem =({ item }) => {
         return (
-            <div className="search-item">
+            <div className="search-item" id="searchitem">
                 <div className="company-info">
                     <div className="company-name">{item.name}</div>
                     <div className="time">12:35</div>

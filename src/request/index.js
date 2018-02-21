@@ -297,9 +297,9 @@ class Request extends Component {
               </div>
             </div>
           </div>
-          <div className="send-btt">
-          <div style={{display:'flex'}}>
-            <Button>Send</Button>
+          <div className="send-btt" id="sendbutton">
+          <div style={{display:'flex'}} >
+            Send
             <img src={require('../shared/img/check1.png')} />
             </div>
           </div>

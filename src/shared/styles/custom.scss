@@ -302,8 +302,9 @@
     overflow: auto;
     max-height: calc(100vh - 417px);
     .content-item {
-      height: 107px;
+      height: 110px;
       display: flex;
+      border-bottom: 1px solid #EDEDED;
       justify-content: space-evenly;
       .image-item{
         .image {
@@ -390,6 +391,7 @@
         width: 397px;
         height: 86px;
         margin-left: 30px;
+        align-self: center;
         background: #F5F6F8;
         border: 1px solid #E7E7E7;
         box-sizing: border-box;
@@ -893,21 +895,29 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  Button {
-    border: 0px;
-    background: transparent;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 21px;
-    text-align: center;
-    
-    color: #FFFFFF;
-  }
+  margin: auto;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 21px;
+  text-align: center;
+  
+  color: #FFFFFF;
+
   img {
     width: 20px;
     height: 20px;
     margin: auto;
+    margin-left: 10px;
   }
+}
+#sendbutton:active {
+  background-color: rgb(78, 182, 83);
+}
+#searchitem:active {
+  background-color: #eeeeee;
+}
+#contentitem:active {
+  background-color: #F5F6F8;
 }
