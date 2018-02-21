@@ -9,6 +9,7 @@ import LoginScreen from './auth/Login';
 import NotFoundScreen from './shared/components/NotFoundScreen';
 import SignupScreen from './auth/Signup';
 import SettingScreen from './setting';
+import AboutLayout from './shared/components/AboutLayout';
 
 class AppRouter extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class AppRouter extends Component {
         <Route path="/request" component={MainLayout} />
         <Route path='/signup' component={SignupScreen} />
         <Route path='/setting' component={SettingLayout} />
+        <Route path='/about' component={AboutLayout} />
         {/* <Route path="/" component={NotFoundScreen} /> */}
         <Route path='/' component={LoginScreen} />
       </Switch>

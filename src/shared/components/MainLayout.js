@@ -91,7 +91,7 @@ class MainLayout extends Component {
           <Layout>
               <Content>
                 <RouteWithData exact path="/request" component={RequestScreen} user={fetchUser.User} search={this.state.search} />
-                <Route exact path="/setting" component={SettingScreen}/>
+                {/* <Route exact path="/setting" component={SettingScreen}/> */}
               </Content>
           </Layout>
         </Layout>

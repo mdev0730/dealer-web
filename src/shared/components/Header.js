@@ -15,6 +15,9 @@ class AppHeader extends Component {
   onSetting() {
     window.location.href = "/setting";
   }
+  onAbout() {
+    window.location.href = "/about";
+  }
 
   render() {
     const { user, onSearch } = this.props;
@@ -36,7 +39,7 @@ class AppHeader extends Component {
           <div className="menu-divide"/>
         </Menu.Item>
         <Menu.Item>
-          <div className="menu-about">
+          <div className="menu-about" onClick={() => this.onAbout()}>
             <img src={require('../img/about.png')}/>
             <div className="about">About</div>
           </div>
