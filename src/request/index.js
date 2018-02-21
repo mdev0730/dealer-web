@@ -6,13 +6,18 @@ import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
 
 import { placeColumns } from '../shared/constants/placesConstants';
-import { itemHeader } from './components/itemheader';
+import itemHeader from './components/itemheader';
+import CompanyItem from './components/CompanyItem';
+import SellItem from './components/SellItem';
 
 class Request extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      sellitems: [
+
+      ],
       companies: [
         {
           name: 'test',
@@ -58,6 +63,42 @@ class Request extends Component {
         },
         {
           name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: '232323',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date()
@@ -138,75 +179,44 @@ class Request extends Component {
             {
               companies.map((company, index) => {
                 return (
-                  <div key={index} className="search-item">
-                    <div className="company-info">
-                      <div className="company-name">{company.name}</div>
-                      <div className="time">12:35</div>
-                    </div>
-                    <div className="product-name">Product Name: {company.productName}</div>
-                    <div className="delivery">Delivery Date: 12/03/18</div>
-                  </div>
+                  <CompanyItem item={company} />
                 )
               })
             }
           </div>
         </div>
-        <div className="request-content" style={{ height: '150vh', overflow: 'auto', maxHeight: '80vh' }}>
-          <div className="request-content-header">
-            <img className="image" src={require('../shared/img/group.png')} />
-            <div className="groupname">
-              <div className="group">TOGEL Constractors</div>
-              <div className="project">Project Name: Gypsum Works</div>
+        <div style={{width:'100%'}}>
+          <div className="request-content">
+            <div className="request-content-header">
+              <img className="image" src={require('../shared/img/group.png')} />
+              <div className="groupname">
+                <div className="group">TOGEL Constractors</div>
+                <div className="project">Project Name: Gypsum Works</div>
+              </div>
+              <div className="delivery">
+                <div><b>Delivery date:</b>21/02/18</div>
+                <div><b>Address:</b> 3 Hanoshoshet St. Tel Aviv</div>
+              </div>
+              <div className="payment">
+                <div><b>Payment:</b> By credit card</div>
+                <div><b>Remark:</b> Half payment on the card and the rest on checks every month</div>
+              </div>
             </div>
-            <div className="delivery">
-              <div><b>Delivery date:</b>21/02/18</div>
-              <div><b>Address:</b> 3 Hanoshoshet St. Tel Aviv</div>
+            <div className="colors-paint">
+              <div className="data">Colors and paint</div>
             </div>
-            <div className="payment">
-              <div><b>Payment:</b> By credit card</div>
-              <div><b>Remark:</b> Half payment on the card and the rest on checks every month</div>
-            </div>
-          </div>
-          <div className="colors-paint">
-            <div className="data">Colors and paint</div>
-          </div>
-          <div className="content-list">
-            <div className="content-item">
-              <div className="image-item">
-                <img className="image" src={require('../shared/img/Externel.png')} />
-                <div className="count">22</div>
-              </div>
-              <div className="item-name">
-                <div className="name">External slit</div>
-                <div className="group">Tambour</div>
-              </div>
-              <div className="item-size">
-                <div className="size"><b>Size:</b> Large</div>
-                <div className="color"><b>Color:</b> </div>
-                <div className="serial">Serial:4343902</div>
-              </div>
-              <div className="out-stock">Out of stock:</div>
-              <div className="circle"></div>
-              <div className="price-total">
-                <div className="price">
-                  <div>Price per unit:</div>
-                  <div className="price-val">00.00 NIS</div>
-                </div>
-                <div className="divider" />
-                <div className="price">
-                  <div>Total:</div>
-                  <div className="total-val">00.00 NIS</div>
-                </div>
-              </div>
+            <div className="content-list" >            
+            {
+                companies.map((company, index) => {
+                  return (
+                    <SellItem item={company} />
+                  )
+                })
+              }
             </div>
           </div>
-          {/* <itemHeader/> */}
-          {/* <Table
-                    columns={placeColumns}
-                    dataSource={dataSource}
-                    expandedRowRender={record => <p className="no-margin">{record.description}</p>}
-                /> */}
-        </div>
+          <div>asdfasdf</div>
+          </div>
       </div>
     )
   }
