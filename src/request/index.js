@@ -16,7 +16,66 @@ class Request extends Component {
 
     this.state = {
       sellitems: [
-
+        {
+          itemname: 'External slit1',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Large',
+          color: '#666666',
+          serial: '434343434',
+          price: '10.25',
+          count: '1'
+        },
+        {
+          itemname: 'External slit2',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Small',
+          color: '#222222',
+          serial: '434343434',
+          price: '10.25',
+          count: '21'
+        },
+        {
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '10.25',
+          count: '23'
+        },
+        {
+          itemname: 'External slit4',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Large',
+          color: '#293843',
+          serial: '434343434',
+          price: '10.25',
+          count: '24'
+        },
+        {
+          itemname: 'External slit5',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Large',
+          color: '#dddddd',
+          serial: '434343434',
+          price: '10.25',
+          count: '25'
+        },
+        {
+          itemname: 'External slit8',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Large',
+          color: '#ff00ff',
+          serial: '434343434',
+          price: '10.25',
+          count: '26'
+        }
       ],
       companies: [
         {
@@ -163,7 +222,7 @@ class Request extends Component {
     // this.setState({searchTerm: term})
   }
   render() {
-    const { companies } = this.state;
+    const { companies, sellitems } = this.state;
     const { fetchPlaces: { loading, allPlaces } } = this.props;
     if (loading) {
       return <div className="loader-indicator" />;
@@ -185,7 +244,7 @@ class Request extends Component {
             }
           </div>
         </div>
-        <div style={{width:'100%'}}>
+        <div style={{ width: '100%' }}>
           <div className="request-content">
             <div className="request-content-header">
               <img className="image" src={require('../shared/img/group.png')} />
@@ -205,18 +264,46 @@ class Request extends Component {
             <div className="colors-paint">
               <div className="data">Colors and paint</div>
             </div>
-            <div className="content-list" >            
-            {
-                companies.map((company, index) => {
+            <div className="content-list" >
+              {
+                sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={company} />
+                    <SellItem item={sell} />
                   )
                 })
               }
             </div>
           </div>
-          <div>asdfasdf</div>
+          <div className="total-view" style={{ backgroundImage: `url(${require('../shared/img/background_bottom.png')})`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto' }}>
+            <div className="total-left-view">
+              <div style={{ display: 'flex' }}>
+                Total: <div className="price-val">00.00 NIS</div>
+              </div>
+              <div style={{ display: 'flex' }}>
+                Discount: <div className="price-val">0%</div>
+              </div>
+              <div style={{ display: 'flex' }}>
+                After discount: <div className="val">00.00NIS</div>
+              </div>
+              <div style={{ display: 'flex' }}>
+                VAT(17%): <div className="val">00.00 NIS</div>
+              </div>
+            </div>
+            <div className="totla-right-view is-right">
+              <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                <div className="total-payment">Total payment:</div>
+                <div className="payment-val"> 00.00 </div>
+                <div className="payment-type"> NIS </div>
+              </div>
+            </div>
           </div>
+          <div className="send-btt">
+          <div style={{display:'flex'}}>
+            <Button>Send</Button>
+            <img src={require('../shared/img/check1.png')} />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
