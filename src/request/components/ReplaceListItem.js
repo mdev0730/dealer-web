@@ -12,11 +12,12 @@ class ReplaceListItem extends Component {
         this.setState({
             selectListItem: true,
         });
+        this.props.handleCheck(1);
     }
     render() {
-        const { item } = this.props;
+        const { item, changeEvent } = this.props;
         return (
-            <div className="replace-list-item" id="contentitem">
+            <div className="replace-list-item" id="contentitem" onClick={() => changeEvent(item.id)}>
                 <div className="image-item">
                     <img className="image" src={require('../../shared/img/Externel.png')} />
                 </div>

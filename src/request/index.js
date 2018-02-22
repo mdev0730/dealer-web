@@ -17,6 +17,7 @@ class Request extends Component {
     this.state = {
       sellitems: [
         {
+          id: 1,
           itemname: 'External slit1',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -27,6 +28,7 @@ class Request extends Component {
           count: '1'
         },
         {
+          id: 2,
           itemname: 'External slit2',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -37,6 +39,7 @@ class Request extends Component {
           count: '21'
         },
         {
+          id: 3,
           itemname: 'External slit3',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -47,6 +50,7 @@ class Request extends Component {
           count: '23'
         },
         {
+          id: 4,
           itemname: 'External slit4',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -57,6 +61,7 @@ class Request extends Component {
           count: '24'
         },
         {
+          id: 5,
           itemname: 'External slit5',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -67,6 +72,7 @@ class Request extends Component {
           count: '25'
         },
         {
+          id: 6,
           itemname: 'External slit8',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -194,7 +200,7 @@ class Request extends Component {
             {
               companies.map((company, index) => {
                 return (
-                  <CompanyItem item={company} />
+                  <CompanyItem item={company} key={index} />
                 )
               })
             }
@@ -224,7 +230,7 @@ class Request extends Component {
               {
                 sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={sell} data={sellitems} />
+                    <SellItem item={sell} data={sellitems} key={index} />
                   )
                 })
               }

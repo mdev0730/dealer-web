@@ -10,9 +10,9 @@ class SellItem extends Component {
 
     this.state = {
       selected: false,
-      ModalText: 'Content of the modal',
       visible: false,
       confirmLoading: false,
+      selectedItemIndex: 0,
     };
     this.onSelect = this.onSelect.bind(this);
   }
@@ -40,6 +40,10 @@ class SellItem extends Component {
     });
   }
 
+  handleCheck = (index) => {
+    this.setState({ selectedItemIndex:index });
+  }
+
   onSelect() {
     if (this.state.selected)
       this.setState({ selected: false });
@@ -47,7 +51,7 @@ class SellItem extends Component {
       this.setState({ selected: true });
   }
   render() {
-    const { visible, confirmLoading, ModalText } = this.state;
+    const { visible, confirmLoading, selectedItemIndex } = this.state;
     const { item, data } = this.props;
     const totalval = item.price * item.count;
     return (
@@ -71,18 +75,26 @@ class SellItem extends Component {
           onCancel={this.handleCancel}
           className="modal-replace"
         >
-          <div className="popup-request-search">
-            <SearchInput className="popup-search-input" onChange={this.searchUpdated} />
-          </div>
-          <div className="replace-list">
-            {
-              data.map((sellitems) => {
-                return (
-                  <ReplaceListItem item={sellitems} />
-                )
-              })
-            }
-          </div>
+          {
+            selectedItemIndex == 0 ?
+              <div><
+                div className="popup-request-search">
+                <SearchInput className="popup-search-input" onChange={this.searchUpdated} />
+              </div>
+                <div className="replace-list">
+                  {
+                    data.map((sellitems, index) => {
+                      return (
+                        <ReplaceListItem item={sellitems} changeEvent={this.handleCheck} key={index}/>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+            :
+                  <div>{ data[selectedItemIndex].itemname }</div>
+        }
+
         </Modal>
         <div onClick={() => this.onSelect()} style={{ display: 'flex' }}>
           <div className="out-stock">Out of stock:</div>
