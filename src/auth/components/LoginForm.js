@@ -36,7 +36,7 @@ class LoginForm extends Component {
           name="password"
           label="Password"
           component={renderInput}
-          placeholder="Password"
+          placeholder=""
           type="password"
           validate={[required, password]}
         />
