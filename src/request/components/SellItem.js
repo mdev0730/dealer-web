@@ -1,16 +1,43 @@
 import React, { Component } from 'react';
+import { Modal } from 'antd';
+import SearchInput, { createFilter } from 'react-search-input'
+import CompanyItem from '../components/CompanyItem';
+import ReplaceListItem from '../components/ReplaceListItem';
 
 class SellItem extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selected: false
+      selected: false,
+      ModalText: 'Content of the modal',
+      visible: false,
+      confirmLoading: false,
     };
     this.onSelect = this.onSelect.bind(this);
   }
-  onReplace()  {
-    alert("1");
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  }
+  handleOk = () => {
+    this.setState({
+      ModalText: 'The modal will be closed after two seconds',
+      confirmLoading: true,
+    });
+    setTimeout(() => {
+      this.setState({
+        visible: false,
+        confirmLoading: false,
+      });
+    }, 2000);
+  }
+  handleCancel = () => {
+    console.log('Clicked cancel button');
+    this.setState({
+      visible: false,
+    });
   }
 
   onSelect() {
@@ -20,7 +47,8 @@ class SellItem extends Component {
       this.setState({ selected: true });
   }
   render() {
-    const { item } = this.props;
+    const { visible, confirmLoading, ModalText } = this.state;
+    const { item, data } = this.props;
     const totalval = item.price * item.count;
     return (
       <div className="content-item" id="contentitem">
@@ -37,6 +65,25 @@ class SellItem extends Component {
           <div className="color" style={{ display: 'flex', alignItems: 'center' }}><b>Color:</b><div style={{ width: '20px', height: '20px', marginLeft: '20px', backgroundColor: item.color, border: '1px' }} /> </div>
           <div className="serial">Serial:{item.serial}</div>
         </div>
+        <Modal title=""
+          visible={visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+          className="modal-replace"
+        >
+          <div className="popup-request-search">
+            <SearchInput className="popup-search-input" onChange={this.searchUpdated} />
+          </div>
+          <div className="replace-list">
+            {
+              data.map((sellitems) => {
+                return (
+                  <ReplaceListItem item={sellitems} />
+                )
+              })
+            }
+          </div>
+        </Modal>
         <div onClick={() => this.onSelect()} style={{ display: 'flex' }}>
           <div className="out-stock">Out of stock:</div>
           {
@@ -59,10 +106,11 @@ class SellItem extends Component {
             </div>
           </div> :
             <div className="price-total1">
-              <div className="item-replace" onClick={() => this.onReplace()}>Replace</div>
+              <div className="item-replace" onClick={() => this.showModal()}>Replace</div>
             </div>
         }
       </div>
+
     )
   }
 }

@@ -955,6 +955,106 @@
     margin-left: 10px;
   }
 }
+/////////////////////////////////////////replace popup//////////////////////////////
+.modal-replace {
+  border-radius: 20px;
+}
+.ant-modal-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.ant-modal-content {
+  border-radius: 20px;
+  width: 350px;
+  margin-left: 100px;
+}
+.ant-modal-close {
+  margin-top:-40px;
+  margin-right: -40px;
+  border-radius: 28px;
+  background: #F5F5F5;
+}
+.ant-modal-footer {
+  height: 1px;
+  visibility: hidden;
+}
+.popup-request-search {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.popup-search-input {
+  margin: 20px 20px;
+  input{
+    width: 100%;
+    background: #FFFFFF;
+    border: 0.3px solid #BDC3D0;
+    box-sizing: border-box;
+    border-radius: 59px;
+    padding: 6px 39px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 13px;
+    color: #3F4257;
+    outline: none;
+  }
+}
+.replace-list {
+  width:100%;
+  overflow: auto;
+  height: calc(100vh - 500px);
+  max-height: calc(100vh - 500px);
+}
+.replace-list-item {
+  display: flex;
+  height: 120px;
+  .image-item{
+    width: 100px;
+    .image {
+      margin-left: 25px;
+      margin-top: 12px;
+      width: 70px;
+      height: 78px;
+      border: 1px solid #F5F6F8;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+}
+.item-name {
+  width: 133px;
+  .name {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+
+    color: #394158;
+  }
+  .group {
+    font-family: ArialMT;
+    line-height: normal;
+    font-size: 13px;
+
+    color: #3F4257;
+  }
+}
+.item-size {
+  width: 100px;
+  height: 88px;
+  font-family: Arial;
+  font-style: normal;
+  line-height: 22px;
+  font-size: 14px;
+  color: #BCBBC4;
+}
+}
+//////////////////////////////////////////////////////////////////////////////////////////
 #sendbutton:active {
   background-color: rgb(78, 182, 83);
 }

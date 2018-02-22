@@ -170,7 +170,7 @@ class Request extends Component {
   }
 
   replaceRequest() {
-    
+
   }
 
   searchUpdated(term) {
@@ -224,7 +224,7 @@ class Request extends Component {
               {
                 sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={sell} index={index}/>
+                    <SellItem item={sell} data={sellitems} />
                   )
                 })
               }
@@ -254,8 +254,8 @@ class Request extends Component {
             </div>
           </div>
           <div className="send-btt" id="sendbutton">
-          <div style={{display:'flex'}} >
-            Send
+            <div style={{ display: 'flex' }} >
+              Send
             <img src={require('../shared/img/check1.png')} />
             </div>
           </div>
