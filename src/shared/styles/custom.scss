@@ -1132,6 +1132,7 @@
     .attribute-item {
       width: 80px;
       height: 30px;
+      padding: 3px;
       margin-right: 10px;
       background: #FFFFFF;
       border: 1.2px solid rgba(189, 195, 208, 0.467703);
@@ -1149,6 +1150,7 @@
     .attribute-item-selected {
       width: 80px;
       height: 30px;
+      padding: 3px;
       margin-right: 10px;
       border: 1.2px solid #394158;
       box-sizing: border-box;
@@ -1192,7 +1194,8 @@
 
       }
       .val {
-        width: 50px;
+        width: 50px;    
+        padding: 6px;
         background: white;
         height: 34px;
         text-align: center;

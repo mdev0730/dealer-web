@@ -101,7 +101,7 @@ class SellItem extends Component {
               <div className="edit-sell-item">
                 <img src={require("../../shared/img/back.png")} style={{ marginLeft: '20px', marginTop: '20px', marginBottom: '10px' }} onClick={() => this.backClick()} />
 
-                <Carousel autopplay>
+                <Carousel autoplay>
                   <div className="image-item">
                     <img className="image" src={require('../../shared/img/Externel.png')} />
                   </div>
