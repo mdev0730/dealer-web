@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox, { Form, Button, Alert } from 'antd';
+import { Form, Button, Alert, Checkbox } from 'antd';
 import { Field, reduxForm } from 'redux-form';
 import { renderInput } from '../../shared/utils/form_components';
 import { required, password } from '../../shared/utils/form_validations';
@@ -40,9 +40,10 @@ class LoginForm extends Component {
           type="password"
           validate={[required, password]}
         />
-          <h4 style={{color:'#BCBBC3'}}>Remember Me</h4>
+        
+          <Checkbox style={{color:'#BCBBC3'}}>Remember Me</Checkbox>
         <FormItem>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', marginTop:'20px'}}>
               <Button type="primary" loading={submitting} htmlType="submit" className="login-form-button">
                 Login
               </Button>

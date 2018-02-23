@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal } from 'antd';
+import { Modal, Button, Carousel } from 'antd';
 import SearchInput, { createFilter } from 'react-search-input'
 import CompanyItem from '../components/CompanyItem';
 import ReplaceListItem from '../components/ReplaceListItem';
@@ -19,6 +19,7 @@ class SellItem extends Component {
   showModal = () => {
     this.setState({
       visible: true,
+      selectedItemIndex: 0
     });
   }
   handleOk = () => {
@@ -41,7 +42,10 @@ class SellItem extends Component {
   }
 
   handleCheck = (index) => {
-    this.setState({ selectedItemIndex:index });
+    this.setState({ selectedItemIndex: index });
+  }
+  backClick = () => {
+    this.setState({ selectedItemIndex: 0 });
   }
 
   onSelect() {
@@ -50,6 +54,7 @@ class SellItem extends Component {
     else
       this.setState({ selected: true });
   }
+
   render() {
     const { visible, confirmLoading, selectedItemIndex } = this.state;
     const { item, data } = this.props;
@@ -85,15 +90,67 @@ class SellItem extends Component {
                   {
                     data.map((sellitems, index) => {
                       return (
-                        <ReplaceListItem item={sellitems} changeEvent={this.handleCheck} key={index}/>
+                        <ReplaceListItem item={sellitems} changeEvent={this.handleCheck} key={index} />
                       )
                     })
                   }
                 </div>
               </div>
-            :
-                  <div>{ data[selectedItemIndex].itemname }</div>
-        }
+              :
+              // <div>{ data[selectedItemIndex].itemname }</div>
+              <div className="edit-sell-item">
+                <img src={require("../../shared/img/back.png")} style={{ marginLeft: '20px', marginTop: '20px', marginBottom: '10px' }} onClick={() => this.backClick()} />
+
+                <Carousel autopplay>
+                  <div className="image-item">
+                    <img className="image" src={require('../../shared/img/Externel.png')} />
+                  </div>
+                  <div className="image-item">
+                    <img className="image" src={require('../../shared/img/Externel.png')} />
+                  </div>
+                  <div className="image-item">
+                    <img className="image" src={require('../../shared/img/Externel.png')} />
+                  </div>
+                  <div className="image-item">
+                    <img className="image" src={require('../../shared/img/Externel.png')} />
+                  </div>
+                </Carousel>
+                <div style={{ marginTop: '10px' }}>
+                  <div className="item-name">
+                    <div className="name">{item.itemname}</div>
+                    <div className="group">{item.companyname}</div>
+                    <div className="serial">SKU:{item.serial}</div>
+                    <div className="color">
+                      <div style={{ width: '80px' }}>Color:{this.renderColor}</div>
+                      <div className="color-item"></div>
+                      <div className="color-item1"></div>
+                      <div className="color-item2"></div>
+                    </div>
+                    <div className="attribute">
+                      <div style={{ width: '80px' }}>Attribute</div>
+                      <div className="attribute-item">brilliant</div>
+                      <div className="attribute-item-selected">silk</div>
+                      <div className="attribute-item">matt</div>
+                    </div>
+                    <div className="size">
+                      <div style={{ width: '80px' }}>Size</div>
+                      <div className="attribute-item">Large</div>
+                      <div className="attribute-item-selected">Medium</div>
+                      <div className="attribute-item">Normal</div>
+                    </div>
+                    <div className="amount">
+                      <div style={{ width: '80px' }}>Amount</div>
+                      <div className="amount-item">
+                        <div className="plus">+</div>
+                        <div className="val">10</div>
+                        <div className="minus">-</div>
+                      </div>
+                    </div>
+                    <Button onClick={() => this.handleCancel()}>Add</Button>
+                  </div>
+                </div>
+              </div>
+          }
 
         </Modal>
         <div onClick={() => this.onSelect()} style={{ display: 'flex' }}>
