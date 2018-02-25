@@ -32,6 +32,8 @@ class AppRouter extends Component {
       <Switch>
         <Route path="/request" component={MainLayout} />
         <Route path="/bid" component={MainLayout} />
+        <Route path="/order" component={MainLayout} />
+        <Route path="/history" component={MainLayout} />
         <Route path='/signup' component={SignupScreen} />
         <Route path='/setting' component={SettingLayout} />
         <Route path='/about' component={AboutLayout} />

@@ -9,6 +9,8 @@ import Header from './Header';
 import SecondSidebar from './SecondSidebar';
 import RequestScreen from '../../request';
 import BidScreen from '../../bid';
+import HistoryScreen from '../../history';
+import OrderScreen from '../../order';
 import SettingScreen from '../../setting';
 
 const { Content } = Layout;
@@ -63,7 +65,9 @@ class MainLayout extends Component {
         <Sidebar user={fetchUser.User} />
           <Layout>
               <Content>
-                <RouteWithData exact path="/bid" component={BidScreen} user={fetchUser.User} search={this.state.search} />
+                <RouteWithData exact path="/bid" component={BidScreen} />
+                <RouteWithData exact path="/order" component={OrderScreen} />
+                <RouteWithData exact path="/history" component={HistoryScreen} />
                 <RouteWithData exact path="/request" component={RequestScreen} user={fetchUser.User} search={this.state.search} />
                 {/* <Route exact path="/setting" component={SettingScreen}/> */}
               </Content>

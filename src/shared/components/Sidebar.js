@@ -39,7 +39,7 @@ class Sidebar extends Component {
             </Link>
           </Menu.Item>
           <Menu.Item key="orders" className="left-menu-items">
-            <Link to="/request">
+            <Link to="/order">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={Orders}/>
                 <h4>Orders</h4>
@@ -47,7 +47,7 @@ class Sidebar extends Component {
             </Link>
           </Menu.Item>
           <Menu.Item key="history" className="left-menu-items">
-            <Link to="/request">
+            <Link to="/history">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={History}/>
                 <h4>History</h4>
