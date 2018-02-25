@@ -8,34 +8,6 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import SecondSidebar from './SecondSidebar';
 import RequestScreen from '../../request';
-import PlacesScreen from '../../places';
-import NewPlaceScreen from '../../places/NewPlace';
-import EditPlaceScreen from '../../places/EditPlace';
-import UsersScreen from '../../users';
-import NewUserScreen from '../../users/NewUser';
-import EditUserScreen from '../../users/EditUser';
-import StoriesScreen from '../../stories';
-import NewStoryScreen from '../../stories/NewStory';
-import EditStoryScreen from '../../stories/EditStory';
-import CampaignsScreen from '../../campaigns';
-import NewCampaignScreen from '../../campaigns/NewCampaign';
-import EditCampaignScreen from '../../campaigns/EditCampaign';
-import NewEventScreen from '../../campaigns/NewEvent';
-import EditEventScreen from '../../campaigns/EditEvent';
-
-import CollectionsScreen from '../../collections';
-import NewCollectionScreen from '../../collections/NewCollection';
-import EditCollectionScreen from '../../collections/EditCollection';
-import EditCollectionAddPlaceScreen from '../../collections/EditCollectionAddPlace';
-
-import FeedScreen from '../../feed';
-import NewFeedScreen from '../../feed/NewFeed';
-
-import NewConditionGroupScreen from '../../campaigns/NewConditionGroup';
-import EditConditionGroupScreen from '../../campaigns/EditConditionGroup';
-
-import NewConditionScreen from '../../campaigns/NewCondition';
-import EditConditionScreen from '../../campaigns/EditCondition';
 import SettingScreen from '../../setting';
 
 const { Content } = Layout;
