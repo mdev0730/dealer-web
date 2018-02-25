@@ -8,6 +8,7 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import SecondSidebar from './SecondSidebar';
 import RequestScreen from '../../request';
+import BidScreen from '../../bid';
 import PlacesScreen from '../../places';
 import NewPlaceScreen from '../../places/NewPlace';
 import EditPlaceScreen from '../../places/EditPlace';
@@ -90,6 +91,7 @@ class MainLayout extends Component {
         <Sidebar user={fetchUser.User} />
           <Layout>
               <Content>
+                <RouteWithData exact path="/bid" component={BidScreen} user={fetchUser.User} search={this.state.search} />
                 <RouteWithData exact path="/request" component={RequestScreen} user={fetchUser.User} search={this.state.search} />
                 {/* <Route exact path="/setting" component={SettingScreen}/> */}
               </Content>

@@ -27,10 +27,11 @@ class AppRouter extends Component {
     // if (this.props.loggedInUserQuery.loading) {
     //   return <div className="loader-indicator" />;
     // }
-    
+
     const appRouter = (
       <Switch>
         <Route path="/request" component={MainLayout} />
+        <Route path="/bid" component={MainLayout} />
         <Route path='/signup' component={SignupScreen} />
         <Route path='/setting' component={SettingLayout} />
         <Route path='/about' component={AboutLayout} />

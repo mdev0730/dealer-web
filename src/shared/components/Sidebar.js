@@ -31,10 +31,10 @@ class Sidebar extends Component {
             </Link>
           </Menu.Item>
           <Menu.Item key="quotes" className="left-menu-items">
-            <Link to="/request">
+            <Link to="/bid">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={Quotes}/>
-                <h4>Bids</h4>
+                <h4>Quotes</h4>
               </div>
             </Link>
           </Menu.Item>
