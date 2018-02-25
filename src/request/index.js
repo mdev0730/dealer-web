@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { graphql } from 'react-apollo';
 import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
-
-import { placeColumns } from '../shared/constants/placesConstants';
 import itemHeader from './components/itemheader';
 import CompanyItem from './components/CompanyItem';
 import SellItem from './components/SellItem';

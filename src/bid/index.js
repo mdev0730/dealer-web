@@ -5,7 +5,6 @@ import { graphql } from 'react-apollo';
 import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
 
-import { placeColumns } from '../shared/constants/placesConstants';
 import itemHeader from '../request/components/itemheader';
 import CompanyItem from '../request/components/CompanyItem';
 import SellItem from '../request/components/SellItem';
@@ -127,12 +126,6 @@ class Bid extends Component {
   }
   render() {
     const { companies, sellitems } = this.state;
-    const { fetchPlaces: { loading, allPlaces } } = this.props;
-    if (loading) {
-      return <div className="loader-indicator" />;
-    }
-
-    const dataSource = allPlaces.map(place => ({ ...place, key: place.id }));
 
     return (
       <div id="request" className="request-screen">
@@ -207,41 +200,5 @@ class Bid extends Component {
   }
 }
 
-const FETCH_PLACES = gql`
-  query FetchPlaces($userId: ID, $search: String) {
-    allPlaces (filter: {
-      AND: [
-        { createdBy: { id: $userId } },
-        { placeName: $search }
-      ]
-    }) {
-      id
-      createdAt
-      placeName
-      description
-      addressCityTown
-      addressCountry
-      source
-      status
-      createdBy {
-        id
-        username
-      }
-    }
-  }
-`
-
-const BidScreen = graphql(FETCH_PLACES, {
-  name: 'fetchPlaces',
-  options: ({ user, search }) => {
-    let variables = {};
-    // if (!user.group.includes('ADMIN')) {
-    //   variables = { userId: user.id };
-    // }
-    // if (search) {
-    //   variables = { ...variables, search };
-    // }
-    return { variables };
-  }
-})(Bid);
+const BidScreen =Bid;
 export default BidScreen;
