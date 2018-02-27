@@ -67,7 +67,7 @@ class AppHeader extends Component {
         <Menu.Item>
           <div onClick={() => this.onLogout()} className="logout">
             <img src={require('../img/logout.png')}/>
-            <div className="log">Logout</div>
+            <div className="log">Log out</div>
           </div>
         </Menu.Item>
       </Menu>
@@ -82,14 +82,11 @@ class AppHeader extends Component {
         </div>
         <div className="profile-status is-right">
           <div className="title">Touboul</div>
-          <Menu mode="horizontal" selectable={false}>
+          <Menu mode="horizontal" selectable={true}>
             <Menu.Item>
               <Dropdown overlay={profileMenu}>
                 <div className="dropdown">
-                  {/* <span className="anticon circle online" /> */}
                   <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" >
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
                     <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                       <g id="REQUESTS-004" transform="translate(-1370.000000, -22.000000)">
                         <g id="Drop-down" transform="translate(1370.000000, 22.000000)">

@@ -23,7 +23,6 @@
       font-family: Roboto-Regular;
       font-size: 14px;
       color: #FFFFFF;
-      margin-top: 8px;
     }
 
     .ant-menu {
@@ -56,6 +55,22 @@
 }
 
 
+.logo {
+  height: 60px;
+  width: 121px;
+  padding: 15px;
+  
+  .ic-logo {
+    display: flex;
+    margin: auto;
+    width: 82px;
+    height: 25px;
+    background-size: contain;
+    background-image: url(../src/shared/img/logo.png);
+    background-repeat: no-repeat;
+  }
+}
+
 // header bar style
 .ant-layout-header {
   height: 60px;
@@ -69,14 +84,15 @@
   width: 280px;
 }
 .menu-divide {
-  width: 208px;
-  height: 2px;
+  width: 201px;
+  height: 1px;
   margin-left: 40px;
   background:  #E6E6E6;
 }
 .profile-menu-mail {
   display: flex;
-  margin: 23px 15px;
+  height: 52px;
+  margin: 20px 10px;
   .company-img {
     width: 52px;
     height:52px;
@@ -90,14 +106,13 @@
     margin-left: 10px;
     .name {
       font-family: Arial;
-      line-height: 17px;
-      font-size: 17px;
+      font-size: 18px;
       color: #394158;
     }
     .mail {
       font-family: ArialMT;
       line-height: normal;
-      font-size: 13px;
+      font-size: 12px;
       
       color: #BCBBC3;
     }
@@ -116,14 +131,15 @@
   width: 120px;
   height: 34px;
   margin-top: 7px;
-  margin-left: 23px;
+  margin-left: 15px;
   font-family: Arial;
   line-height: 17px;
   font-size: 17px;
   color: #394158;
   img {
-    width: 10px;
-    height: 16px;
+    padding-right: 5px;
+    width: 18px;
+    height: 22px;
   }
   .about {
     margin-left: 20px;
@@ -142,8 +158,8 @@
   font-size: 17px;
   color: #394158;
   img {
-    width: 18px;
-    height: 16px;
+    width: 22px;
+    height: 18px;
   }
   .about {
     margin-left: 20px;
@@ -160,26 +176,8 @@
   font-size: 17px;
   color: #394158;
   img {
-    width: 18px;
+    width: 22px;
     height: 18px;
-  }
-  .about {
-    margin-left: 20px;
-  }
-}
-.menu-disconnect{
-  display: flex;
-  width: 120px;
-  height: 34px;
-  margin-top: 7px;
-  margin-left: 23px;
-  font-family: Arial;
-  line-height: 17px;
-  font-size: 17px;
-  color: #394158;
-  img {
-    width: 10px;
-    height: 16px;
   }
   .about {
     margin-left: 20px;
@@ -191,9 +189,9 @@
   background: #E2445C;
   display: flex;
   img {
-    width:22px;
-    height:22px;
-    margin-left: 80px;
+    width:24px;
+    height:24px;
+    margin-left: 70px;
     margin-top: 10px;
   }
   .log{
@@ -207,4 +205,11 @@
     color: #FFFFFF;
 
   }
+}
+.ant-dropdown-menu {
+  width: 241px;
+  height: 293px;
+}
+.ant-dropdown-menu-item{
+  padding: 5px 0px;
 }
