@@ -23,7 +23,7 @@ class LoginForm extends Component {
 
         {error && <FormItem><Alert type="error" message={error} closable /></FormItem>}
 
-        <h1 align="center" style={{color:'#394158'}}>Login</h1>
+        <div className="fontH10 --navy-color" align="center" style={{ marginTop: 20, marginBottom:40  }}>Login</div>
         <Field
           name="email"
           label="Name"
@@ -40,18 +40,18 @@ class LoginForm extends Component {
           type="password"
           validate={[required, password]}
         />
-        
-          <Checkbox style={{color:'#BCBBC3'}}>Remember Me</Checkbox>
+
+        <Checkbox className="remember-checkbox">Remember Me</Checkbox>
         <FormItem>
-            <div style={{display: 'flex', marginTop:'20px'}}>
-              <Button type="primary" loading={submitting} htmlType="submit" className="login-form-button">
-                Login
+          <div style={{ display: 'flex', marginTop: '20px' }}>
+            <Button type="primary" loading={submitting} htmlType="submit" className="fontH1 --navy-color login-form-button">
+              Login
               </Button>
-              <Button type="primary"  className="forgot-form-button" style={{marginLeft: 10}}>
+            <Button type="primary" className="forgot-form-button fontH1 --navy-color">
               forgot password
                 {/* <Link to="../Signup">forgot password</Link>                   */}
-              </Button>
-            </div>
+            </Button>
+          </div>
         </FormItem>
       </Form>
     )

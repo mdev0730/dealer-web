@@ -4,60 +4,77 @@
   align-items: center;
   
   .login-wrapper {
+    width: 469px;
+    height: 459px;
+    align-items: center;
     border: 1px solid #babbbb;
     margin-top: 50px;
     padding: 2%;
     background: #f8fcff;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
   }
   .login-panel {
-    width: 468px;
+    width: 469px;
+    padding-top: 10px;
     margin: auto;
+    align-content: center;
     align-self: center;
   }
   .login-form {
-    width: 380px;
+    width: 350px;
     margin: auto;
+    input {
+      border: none !important;
+      border-bottom: 1px solid #ddd !important;
+      border-radius: 0 !important;
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 21px;    
+      color: #394158;
+    }
+    input:focus{
+      border-bottom: 1px solid #ddd !important;
+      box-shadow: none;
+    }
+    input:-webkit-autofill{
+      background-color: transparent !important;
+    }
   }
   .login-form .ant-col-xs-24{
     width: 100% !important;
-  }
-  .login-form input{
-    border: none !important;
-    border-bottom: 1px solid #ddd !important;
-    border-radius: 0 !important;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 21px;
-    
-    color: #394158;
-  }
-  .login-form input:focus{
-    border-bottom: 1px solid #ddd !important;
-    box-shadow: none;
-  }
-  .login-form input:-webkit-autofill{
-    background-color: transparent !important;
-  }
+    label {
+      color: #BCBBC3;
+      font-size: 17px;
 
+    }
+  }
+  .remember-checkbox {
+    color: #BCBBC3;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
   .login-form-button {
-    width: 100%;
+    width: 152px;
+    height: 48px;
+    border-radius: 8px;
   }
   .forgot-form-button {
-    width: 100%;
-    background-color: transparent;
-    color: black;
-    border-color: black;
+    width: 190px;
+    height: 48px;
+    color: #394158;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #000;
+    margin-left: 10px;
   }
 
   .login-logo {
-    width: 116px;
-    height: auto;
+    width: 117px;
+    height: 35px;
     margin: auto;
-    display: block;
-    padding-top: 146px;
+    display: flex;
+    margin-top: 146px;
     // margin-top: 150px;
   }
 }

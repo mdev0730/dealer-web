@@ -39,12 +39,12 @@ class Login extends Component {
       <div id="login" layout="vertical" style={{backgroundImage: `url(${require('../shared/img/authBack.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
         <div className="login-panel">
           <img className="login-logo"  src={Logo} />
-            <div className="login-wrapper" style={{width: 468, alignSelf: 'center'}}>
+            <div className="login-wrapper">
               <LoginForm onSubmit={this.handleSubmit} />
             </div>
             <div style={{display:'flex'}}>
-              <h4 style={{color:'white', marginTop:'20px'}}>About Dealer |</h4>
-              <Link to="./signup" style={{color:'white', marginTop:'19px', marginLeft:'10px', textDecoration:'underline'}} onClick={this.handleRegister}> Register</Link>
+              <div className="fontH9" style={{color:'white', marginTop:'25px', marginLeft:'20px'}}>About Dealer |</div>
+              <Link to="./signup" className="fontH1" style={{color:'white', marginTop:'24px', marginLeft:'10px', textDecoration:'underline'}} onClick={this.handleRegister}> Register</Link>
               </div>
         </div>
       </div>
