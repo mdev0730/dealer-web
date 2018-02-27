@@ -3,6 +3,7 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Logo from '../shared/img/mark-white.png';
 
 import SignupForm from './components/SignupForm';
 import { parseFormErrors } from '../shared/utils/form_errors';
@@ -41,6 +42,9 @@ class Signup extends Component {
           <div className="signup-help">Please fill in your information below</div>
           <div className="signup-wrapper">
             <SignupForm onSubmit={this.handleSubmit} />
+          </div>
+          <div align="center">
+            <img className="mark" src={Logo} />
           </div>
         </div>
       </div>
