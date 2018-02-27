@@ -86,10 +86,10 @@ class SignupForm extends Component {
           By opening an account, you agree to
         </div>
         <div className="term1">
-          our <b>Terms of Use</b>
+          our <span className="fontH1" style={{color:'#1A9FFF'}}>Terms of Use</span>
         </div>
         <FormItem>
-          <Button type="primary" loading={submitting} htmlType="submit" className="register-button">
+          <Button type="primary" loading={submitting} htmlType="submit" className="register-button fontH1">
             Register
           </Button>
         </FormItem>
