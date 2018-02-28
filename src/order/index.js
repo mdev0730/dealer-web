@@ -16,7 +16,7 @@ class Order extends Component {
 
     this.state = {
       sort_label: "",
-      filter_label : "",
+      filter_label: "",
       sellitems: [
         {
           id: 1,
@@ -97,96 +97,96 @@ class Order extends Component {
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:true
+          paid: true,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:true
+          paid: false,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:true
+          paid: true,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:false
+          paid: true,
+          supplied: false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:true
+          paid: false,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:false
+          paid: true,
+          supplied: false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:true
+          paid: true,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:false
+          paid: false,
+          supplied: false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:true
+          paid: false,
+          supplied: true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:true,
-          supplied:false
+          paid: true,
+          supplied: false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:true
+          paid: false,
+          supplied: true
         },
         {
           name: '232323',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid:false,
-          supplied:false
+          paid: false,
+          supplied: false
         }
       ]
     }
@@ -204,9 +204,9 @@ class Order extends Component {
     // this.setState({searchTerm: term})
   }
 
-  getTotalAmount =() => {
+  getTotalAmount = () => {
     var totalAmount = 0;
-    for(var i = 0; i < this.state.sellitems.length; i++){
+    for (var i = 0; i < this.state.sellitems.length; i++) {
       totalAmount += (this.state.sellitems[i].price * this.state.sellitems[i].count);
     }
     console.log(totalAmount);
@@ -304,11 +304,11 @@ class Order extends Component {
               </div>
               <div className="contact">
                 <div className="contact-btt">
-                  <img src={require('../shared/img/contact.png')}/>
+                  <img src={require('../shared/img/contact.png')} />
                   <p>Contact</p>
                 </div>
                 <div className="email-btt">
-                  <img src={require('../shared/img/email.png')}/>
+                  <img src={require('../shared/img/email.png')} />
                   <p>Email</p>
                 </div>
               </div>
@@ -340,6 +340,12 @@ class Order extends Component {
               <div style={{ display: 'flex' }}>
                 VAT(17%): <div className="val">{(this.getTotalAmount() * 0.1 * 0.17).toLocaleString()} NIS</div>
               </div>
+            </div>
+            <div className="receive-payment-view is-center">
+              <p>Paid:5,000.00 NIS</p>
+              <p>left to pay: 4,123.00 NIS</p>
+              <div className="receive-payment-val is-center"> 00.00 NIS</div>
+                <Button className="receive-payment-button">Receive Payment</Button>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>

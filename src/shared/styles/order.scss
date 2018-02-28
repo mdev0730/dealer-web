@@ -142,3 +142,44 @@
         }
     }
   }
+
+  .receive-payment-view {
+      width: 180px;
+      text-align: center;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 14px;      
+      color: #7A838F;
+      .receive-payment-val {
+          margin:auto;
+        width: 126px;
+        height: 27px;
+        padding: 5px 18px;
+        border-radius: 13px;
+        border: 1px solid #BDC3D0;
+        font-family: ArialMT;
+        line-height: normal;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;        
+        color: #B4BAC1;
+      }
+      .receive-payment-button {
+        margin-top: 9px;
+        width: 150px;
+        height: 31px;          
+        background: #16C360;
+        border-radius: 6px;
+        border-color: #16C360;
+
+        font-family: Arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+
+        color: #fff;
+      }
+  }
