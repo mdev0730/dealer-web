@@ -6,9 +6,7 @@ import gql from 'graphql-tag';
 import MainLayout from './shared/components/MainLayout';
 import SettingLayout from './shared/components/SettingLayout';
 import LoginScreen from './auth/Login';
-import NotFoundScreen from './shared/components/NotFoundScreen';
 import SignupScreen from './auth/Signup';
-import SettingScreen from './setting';
 import AboutLayout from './shared/components/AboutLayout';
 
 class AppRouter extends Component {

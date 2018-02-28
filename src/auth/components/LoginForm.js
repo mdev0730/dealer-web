@@ -3,7 +3,6 @@ import { Form, Button, Alert, Checkbox } from 'antd';
 import { Field, reduxForm } from 'redux-form';
 import { renderInput } from '../../shared/utils/form_components';
 import { required, password } from '../../shared/utils/form_validations';
-import { Link } from 'react-router-dom';
 
 const FormItem = Form.Item;
 
@@ -16,7 +15,7 @@ class LoginForm extends Component {
     // </Switch>
   }
   render() {
-    const { handleSubmit, error, submitting, forgoting } = this.props;
+    const { handleSubmit, error, submitting } = this.props;
 
     return (
       <Form layout="vertical" className="login-form" onSubmit={handleSubmit}>

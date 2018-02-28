@@ -4,17 +4,10 @@ import { Layout } from 'antd';
 import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import Sidebar from './Sidebar';
 import Header from './Header';
-import SecondSidebar from './SecondSidebar';
-import RequestScreen from '../../request';
 import SettingScreen from '../../setting';
 
 const { Content } = Layout;
-
-const RouteWithData = ({ component: Component, user, search, ...rest }) => (
-  <Route exact {...rest} render={props => (<Component user={user} search={search} {...props} />)} />
-)
 
 class SettingLayout extends Component {
   constructor(props) {
@@ -41,7 +34,7 @@ class SettingLayout extends Component {
       `,
       updateQuery: (previousState, { subscriptionData }) => {
         const user = subscriptionData.data.User.node;
-        if (previousState.User.id == user.id) {
+        if (previousState.User.id === user.id) {
           return { User: user };
         }
         return previousState;
@@ -51,8 +44,6 @@ class SettingLayout extends Component {
   }
 
   render() {
-    const { loggedInUserQuery, fetchUser } = this.props;
-
     // if (loggedInUserQuery.loading || fetchUser.loading) return null;
 
     return (

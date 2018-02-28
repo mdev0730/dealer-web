@@ -6,12 +6,10 @@ import gql from 'graphql-tag';
 
 import Sidebar from './Sidebar';
 import Header from './Header';
-import SecondSidebar from './SecondSidebar';
 import RequestScreen from '../../request';
 import BidScreen from '../../bid';
 import HistoryScreen from '../../history';
 import OrderScreen from '../../order';
-import SettingScreen from '../../setting';
 
 const { Content } = Layout;
 
@@ -44,7 +42,7 @@ class MainLayout extends Component {
       `,
       updateQuery: (previousState, { subscriptionData }) => {
         const user = subscriptionData.data.User.node;
-        if (previousState.User.id == user.id) {
+        if (previousState.User.id === user.id) {
           return { User: user };
         }
         return previousState;
@@ -54,7 +52,7 @@ class MainLayout extends Component {
   }
 
   render() {
-    const { loggedInUserQuery, fetchUser } = this.props;
+    const { fetchUser } = this.props;
 
     // if (loggedInUserQuery.loading || fetchUser.loading) return null;
 

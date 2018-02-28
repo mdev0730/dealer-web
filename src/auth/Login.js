@@ -3,7 +3,6 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Logo from '../shared/img/logo.png';
 
-import { Button, Alert } from 'antd';
 import { Link } from 'react-router-dom';
 import LoginForm from './components/LoginForm';
 import { parseFormErrors } from '../shared/utils/form_errors';
