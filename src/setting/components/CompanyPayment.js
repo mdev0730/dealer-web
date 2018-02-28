@@ -14,8 +14,14 @@ class CompanyPayment extends Component {
             <div className="company-payment">
                 <div className="company-logo">
                     <p> Choose payment method below </p>
-                    <img className="visa-img" src={require('../../shared/img/visa.png')} />
-                    <img className="paypal-img" src={require('../../shared/img/paypal.png')} />
+                    <div className="visa-selected">
+                        <img className="visa-img" src={require('../../shared/img/visa.png')} />
+                        <div className="pay-mode-text">pay with Credit Card</div>
+                    </div>
+                    <div className="paypal-no-selected">
+                        <img className="paypal-img" src={require('../../shared/img/paypal.png')} />
+                        <div className="pay-mode-text">pay with PayPal</div>
+                    </div>
                 </div>
                 <div className="company-details">
                     <Form layout="vertical" className="signup-form" onSubmit={handleSubmit}>
