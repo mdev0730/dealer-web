@@ -94,73 +94,73 @@ class History extends Component {
           name: 'test',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         },
         {
           name: '232323',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
         }
       ]
     }

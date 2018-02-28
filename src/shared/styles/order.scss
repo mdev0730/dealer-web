@@ -43,6 +43,21 @@
     }
 }
 
+.product-name {
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 12px;
+    width: 180px;  
+    color: #394158;
+  }
+  .delivery {
+    font-family: ArialMT;
+    line-height: normal;
+    font-size: 12px;
+    width: 180px;
+
+    color: #BCBBC3;
+  }
 .search-list-order {
     width:100%;
     overflow: auto;
@@ -75,21 +90,55 @@
           color: #BCBBC3;
         }
       }
-      .product-name {
-        margin-top:8px;
-        font-family: Arial;
-        font-weight: normal;
-        font-size: 12px;
-  
-        color: #394158;
-      }
-      .delivery {
-        margin-top:4px;
-        font-family: ArialMT;
-        line-height: normal;
-        font-size: 12px;
-  
-        color: #BCBBC3;
-      }
+      .view-paid {
+          margin-left: 10px;
+          width: 64px;
+          height: 16px;
+          border: 1px solid #16c360;
+          border-radius: 10px;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 9px;
+          text-align: center;
+          color: #16c360;
+        }
+        .view-supplied {
+          margin-left: 10px;
+          width: 64px;
+          height: 16px;
+          border: 1px solid #16c360;
+          border-radius: 10px;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 9px;
+          text-align: center;
+          color: #16c360;
+        }
+        .view-nopaid {
+          margin-left: 10px;
+          width: 64px;
+          height: 16px;
+          border: 1px solid #e2445c;
+          border-radius: 10px;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 9px;
+          text-align: center;
+          color: #e2445c;
+      
+        }
+        .view-nosupplied {
+          margin-left: 10px;
+          width: 64px;
+          height: 16px;
+          border: 1px solid #e2445c;
+          border-radius: 10px;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 9px;
+          text-align: center;
+          color: #e2445c;
+      
+        }
     }
   }

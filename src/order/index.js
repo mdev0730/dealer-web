@@ -7,7 +7,7 @@ import gql from 'graphql-tag';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import itemHeader from '../request/components/itemheader';
-import CompanyItem from '../shared/components/CompanyItem';
+import CompanyItemOrder from '../shared/components/CompanyItemOrder';
 import QuotItem from '../bid/components/QuotItem';
 
 class Order extends Component {
@@ -96,73 +96,97 @@ class Order extends Component {
           name: 'test',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:true
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:true,
+          supplied:false
         },
         {
           name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:true
         },
         {
           name: '232323',
           productName: 'Duplex',
           deliveryDate: new Date(),
-          createdAt: new Date()
+          createdAt: new Date(),
+          paid:false,
+          supplied:false
         }
       ]
     }
@@ -246,7 +270,7 @@ class Order extends Component {
             {
               companies.map((company, index) => {
                 return (
-                  <CompanyItem item={company} key={index} />
+                  <CompanyItemOrder item={company} key={index} />
                 )
               })
             }
