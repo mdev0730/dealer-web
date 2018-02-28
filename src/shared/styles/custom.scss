@@ -89,6 +89,10 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  font-family: Arial;
+  font-weight:normal;
+  font-size: 15px;
+  color: #BCBBC3;
   .notify {
     width: 23px;
     height:12px;
@@ -109,6 +113,8 @@
 .ic-requests {
   width: 26px;
   height: auto;
+  -webkit-filter: grayscale(1);
+  opacity: 0.5;
 
 }
 

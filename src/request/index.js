@@ -207,7 +207,6 @@ class Request extends Component {
         <div style={{ width: '100%' }}>
           <div className="request-content">
             <div className="request-content-header">
-              {/* <div> */}
                 <img className="image" src={require('../shared/img/group.png')} />
                 <div className="groupname">
                   <div className="group">TOGEL Constractors</div>
@@ -221,7 +220,6 @@ class Request extends Component {
                   <div><b>Payment:</b> By credit card</div>
                   <div><b>Remark:</b> Half payment on the card and the rest on checks every month</div>
                 </div>
-              {/* </div> */}
             </div>
             <div className="colors-paint">
               <div className="data">Colors and paint</div>

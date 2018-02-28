@@ -17,3 +17,10 @@
     border-right-width: 0
   }
 }
+
+.ant-menu-item-selected {
+  img {
+    -webkit-filter: grayscale(0);
+    opacity: 1;
+  }
+}

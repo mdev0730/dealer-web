@@ -34,7 +34,7 @@ class Sidebar extends Component {
             <Link to="/bid">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={Quotes}/>
-                <h4>Quotes</h4>
+                <div>Quotes</div>
               </div>
             </Link>
           </Menu.Item>
@@ -42,7 +42,7 @@ class Sidebar extends Component {
             <Link to="/order">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={Orders}/>
-                <h4>Orders</h4>
+                <div>Orders</div>
               </div>
             </Link>
           </Menu.Item>
@@ -50,7 +50,7 @@ class Sidebar extends Component {
             <Link to="/history">
               <div className="div-left-menu-items">
                 <img className="ic-requests" src={History}/>
-                <h4>History</h4>
+                <div>History</div>
               </div>
             </Link>
           </Menu.Item>
