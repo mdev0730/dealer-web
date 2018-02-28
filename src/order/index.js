@@ -203,6 +203,16 @@ class Order extends Component {
     //   alert(term);
     // this.setState({searchTerm: term})
   }
+
+  getTotalAmount =() => {
+    var totalAmount = 0;
+    for(var i = 0; i < this.state.sellitems.length; i++){
+      totalAmount += (this.state.sellitems[i].price * this.state.sellitems[i].count);
+    }
+    console.log(totalAmount);
+    return totalAmount;
+  }
+
   getInitialState = () => {
     return {};
   }
@@ -319,16 +329,16 @@ class Order extends Component {
           <div className="total-view" style={{ backgroundImage: `url(${require('../shared/img/background_bottom.png')})`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto' }}>
             <div className="total-left-view">
               <div style={{ display: 'flex' }}>
-                Total: <div className="price-val">00.00 NIS</div>
+                Total: <div className="price-val-normal">{this.getTotalAmount().toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                Discount: <div className="price-val">0%</div>
+                Discount: <div className="price-val-normal">10%</div>
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">00.00NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * 0.1).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">00.00 NIS</div>
+                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.1 * 0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="totla-right-view is-right">
