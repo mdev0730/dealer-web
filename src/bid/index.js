@@ -6,8 +6,8 @@ import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
 
 import itemHeader from '../request/components/itemheader';
-import CompanyItem from '../request/components/CompanyItem';
-import SellItem from '../request/components/SellItem';
+import CompanyItem from '../shared/components/CompanyItem';
+import QuotItem from './components/QuotItem';
 
 class Bid extends Component {
   constructor(props) {
@@ -63,6 +63,30 @@ class Bid extends Component {
       companies: [
         {
           name: 'test',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date()
@@ -165,7 +189,7 @@ class Bid extends Component {
               {
                 sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={sell} data={sellitems} key={index} />
+                    <QuotItem item={sell} data={sellitems} key={index} />
                   )
                 })
               }

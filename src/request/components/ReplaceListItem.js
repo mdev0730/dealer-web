@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CompanyItem from '../components/CompanyItem';
+import CompanyItem from '../../shared/components/CompanyItem';
 
 class ReplaceListItem extends Component {
     constructor(props) {

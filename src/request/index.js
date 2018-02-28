@@ -5,7 +5,7 @@ import { graphql } from 'react-apollo';
 import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
 import itemHeader from './components/itemheader';
-import CompanyItem from './components/CompanyItem';
+import CompanyItem from '../shared/components/CompanyItem';
 import SellItem from './components/SellItem';
 
 class Request extends Component {

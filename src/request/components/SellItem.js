@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Button, Carousel } from 'antd';
 import SearchInput, { createFilter } from 'react-search-input'
-import CompanyItem from '../components/CompanyItem';
+import CompanyItem from '../../shared/components/CompanyItem';
 import ReplaceListItem from '../components/ReplaceListItem';
 
 class SellItem extends Component {

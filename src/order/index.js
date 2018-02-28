@@ -6,7 +6,7 @@ import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
 
 import itemHeader from '../request/components/itemheader';
-import CompanyItem from '../request/components/CompanyItem';
+import CompanyItem from '../shared/components/CompanyItem';
 import SellItem from '../request/components/SellItem';
 
 class Order extends Component {
