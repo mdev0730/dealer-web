@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { graphql } from 'react-apollo';
 import SearchInput, { createFilter } from 'react-search-input'
 import gql from 'graphql-tag';
-
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import itemHeader from '../request/components/itemheader';
 import CompanyItem from '../shared/components/CompanyItem';
 import SellItem from '../request/components/SellItem';
@@ -14,6 +15,8 @@ class Order extends Component {
     super(props);
 
     this.state = {
+      sort_label: "",
+      filter_label : "",
       sellitems: [
         {
           id: 1,
@@ -104,6 +107,30 @@ class Order extends Component {
           createdAt: new Date()
         },
         {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
           name: '232323',
           productName: 'Duplex',
           deliveryDate: new Date(),
@@ -124,14 +151,64 @@ class Order extends Component {
     //   alert(term);
     // this.setState({searchTerm: term})
   }
+  getInitialState = () => {
+    return {};
+  }
+  setValue = (value) => {
+    this.setState({ sort_label: value });
+  }
+  setValue1 = (value) => {
+    this.setState({ filter_label: value });
+  }
+  renderLink = () => {
+    return <a style={{ marginLeft: 5 }} href="/upgrade" target="_blank">Upgrade here!</a>;
+  }
+  renderOption = (option) => {
+    return (
+      <div> {option.label}</div>
+    );
+  }
+  renderValue = (option) => {
+    return <strong >{option.label}</strong>;
+  }
   render() {
     const { companies, sellitems } = this.state;
+    var options = [
+      { label: 'name', value: 'name' },
+      { label: 'date', value: 'date' },
+    ];
+    var options1 = [
+      { label: 'All', value: 'all' },
+      { label: 'date', value: 'date' },
+    ];
 
     return (
       <div id="request" className="request-screen">
         <div className="request-search">
           <SearchInput className="search-input" onChange={this.searchUpdated} />
-          <div className="search-list">
+          <div className="filter-view">
+            <div className="sort-name">Sort by:</div>
+            <Select
+              className="select-sort"
+              onInputChange={(inputValue) => this._inputValue = inputValue}
+              options={options}
+              optionRenderer={this.renderOption}
+              onChange={this.setValue}
+              value={this.state.sort_label}
+              valueRenderer={this.renderValue}
+            />
+            <div className="sort-name">Filter by:</div>
+            <Select
+              className="select-sort"
+              onInputChange={(inputValue) => this._inputValue = inputValue}
+              options={options1}
+              optionRenderer={this.renderOption}
+              onChange={this.setValue1}
+              value={this.state.filter_label}
+              valueRenderer={this.renderValue}
+            />
+          </div>
+          <div className="search-list-order">
             {
               companies.map((company, index) => {
                 return (
@@ -200,5 +277,5 @@ class Order extends Component {
   }
 }
 
-const OrderScreen =Order;
+const OrderScreen = Order;
 export default OrderScreen;

@@ -1,0 +1,95 @@
+.filter-view {
+    display: flex;
+    align-items: center;
+    height: 31px;
+    .sort-name {
+        font-family: Arial;
+        line-height: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;        
+        color: #1A9FFF;
+        margin-left: 5px;
+    }
+    .filter-name {
+        // width: 139px;
+        font-family: Arial;
+        line-height: normal;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;        
+        color: #1A9FFF;
+        input {
+            width: 80px;
+        }
+    }
+    .select-sort {
+        width: 85px;
+        .Select-control {
+            border: none;
+            .Select-value {
+                line-height: 14px;
+                font-family: Arial;
+                line-height: 36px;
+                font-weight: normal;
+                font-size: 12px;
+                text-align: left;    
+                color: #BCBBC3;
+                .Select-value-label {
+                    color: #BCBBC3 !important;
+                }
+            }
+        }
+    }
+}
+
+.search-list-order {
+    width:100%;
+    overflow: auto;
+    background: #F9F9F9;
+    max-height: calc(100vh - 145px);
+    .search-item {
+        align-items: center;
+        display: flex;
+        width: 277px;
+        height: 95px; 
+        padding-left:12px;
+        background: #F9F9F9;
+      cursor: pointer;
+      .company-info {
+        display: flex;
+        .company-name {
+          width: 164px;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 15px;
+          color: #394158;
+        }
+        .time {
+          width:80px;
+          margin-left:10px;
+          font-family: Arial;
+          font-weight: normal;
+          font-size: 12px;
+          text-align: right;
+          color: #BCBBC3;
+        }
+      }
+      .product-name {
+        margin-top:8px;
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 12px;
+  
+        color: #394158;
+      }
+      .delivery {
+        margin-top:4px;
+        font-family: ArialMT;
+        line-height: normal;
+        font-size: 12px;
+  
+        color: #BCBBC3;
+      }
+    }
+  }

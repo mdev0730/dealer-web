@@ -3,6 +3,7 @@
 .request-screen {
     display: flex;
     height: auto;
+    background-color: #fff;
   }
   .request-search {
     width:293px;
@@ -17,7 +18,7 @@
     input{
       width: 100%;
       background: #FFFFFF;
-      border: 0.3px solid #BDC3D0;
+      border: 1px solid #BDC3D0;
       box-sizing: border-box;
       border-radius: 59px;
       /* transform: rotate(-180deg); */
