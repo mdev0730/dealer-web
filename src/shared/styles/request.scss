@@ -33,14 +33,13 @@
   }
   .search-list {
     width:100%;
-    height: 150vh;
     overflow: auto;
     background: #F9F9F9;
     max-height: calc(100vh - 120px);
     .search-item {
         align-items: center;
         display: flex;
-        width: 281px;
+        width: 277px;
         height: 95px; 
         padding-left:12px;
         background: #F9F9F9;
@@ -87,20 +86,19 @@
     width: 100%;
     .request-content-header{
       display: flex;
-      justify-content: space-around;
-      height:97px;
+      align-items: center;
+    //   justify-content: space-around;
+      height:127px;
       background: white;
       .image {
         width: 59px;
         height: 59px;
         margin-left: 28px;
-        margin-top:24px;
       }
       .groupname {
         width: 220px;
         height: 36px;
         margin-left: 15px;
-        margin-top: 30px;
         .group {
           height: 18px;
           font-family: Arial;
@@ -120,12 +118,11 @@
           line-height: normal;
           font-size: 12px;
   
-          color: #3F4257;
+          color: #394158;
         }
       }
       .delivery {
         margin-left: 5px;
-        margin-top: 30px;
         width: 250px;
         font-family: Arial;
         font-style: normal;
@@ -136,7 +133,6 @@
       }
       .payment {
         margin-left: 5px;
-        margin-top: 30px;
         width: 280px;
         font-family: Arial;
         font-style: normal;
@@ -147,7 +143,7 @@
       }
     }
     .colors-paint {
-      height:23px;
+      height:25px;
       width: 100%;
       background: #F6F7F8;
       border: 0.75px solid #E6E6E6;
@@ -158,30 +154,28 @@
         box-sizing: border-box;
         font-family: ArialMT;
         line-height: normal;
-        font-size: 12px;
-    
+        font-size: 12px;    
         color: #BCBBC3;
   
       }
     }
     .content-list {
       background: white;
-      padding-top: 12px;
       height: 150vh;
       overflow: auto;
-      max-height: calc(100vh - 417px);
+      max-height: calc(100vh - 445px);
       .content-item {
-        height: 110px;
+        height: 127px;
         display: flex;
+        align-items: center;
         border-bottom: 1px solid #EDEDED;
         justify-content: space-evenly;
         
         .image-item{
           .image {
-            margin-left: 48px;
-            margin-top: 12px;
+            margin-left: 40px;
             width: 70px;
-            height: 78px;
+            height: 75px;
             border: 1px solid #F5F6F8;
             box-sizing: border-box;
             border-radius: 3px;
@@ -189,7 +183,7 @@
           .count {
             width: 28px;
             height: 12px;
-            margin-left: 70px;
+            margin-left: 62px;
             margin-top: 2px;
             border-radius: 6px;
             border: 0.75px solid  #FFAA09;
@@ -206,7 +200,6 @@
         .item-name {
           width: 133px;
           margin-left: 24px;
-          margin-top: 31px;
           .name {
             font-family: Arial;
             font-style: normal;
@@ -226,8 +219,7 @@
         }
         .item-size {
           width: 100px;
-          height: 88px;
-          margin-top: 25px;
+          height: 70px;
           margin-left: 30px;
           font-family: Arial;
           font-style: normal;
@@ -237,30 +229,29 @@
         }
         .out-stock {
           width: 98px;
+          height: 22px;
           margin-left: 77px;
-          margin-top: 37px;
   
           font-family: Arial;
           font-style: normal;
           font-weight: bold;
-          line-height: 34px;
           font-size: 14px;
   
-          color: #BCBBC4;
+          color: #BCBBC3;
         }
         .circle {
           width: 22px;
           height: 22px;
           min-width: 22px;
-          margin-top: 43px;
           border-radius: 11px;
           border: 1px solid #BDC3D0;
+          cursor: pointer;
         }
         .circle1 {
           width: 22px;
           height: 22px;
           min-width: 22px;
-          margin-top: 43px;
+          cursor: pointer;
         }
         .replace {
           width: 397px;
@@ -272,7 +263,7 @@
         }
         .item-replace {
           width: 175px;
-          height: 42px;
+          height: 41px;
           margin: auto;
           display: flex;
           align-items: center;
@@ -307,7 +298,7 @@
           border: 1px solid #E7E7E7;
           box-sizing: border-box;
           .divider{
-            width: 3px;
+            width: 1px;
             height: 85px;
             border: 1px solid #E7E7E7;
           }
@@ -319,9 +310,9 @@
             font-style: normal;
             font-weight: bold;
             line-height: 26px;
-            font-size: 17px;
-            
+            font-size: 18px;            
             color: #394158;
+
             .price-val {
               margin-top: 8px;
               width: 126px;
@@ -338,6 +329,7 @@
               color: #B4BAC1;
             }
             .total-val {
+                font-size: 17px;      
               font-weight: normal;
   
             }
