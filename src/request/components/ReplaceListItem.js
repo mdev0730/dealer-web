@@ -27,8 +27,8 @@ class ReplaceListItem extends Component {
                         <div className="group">{item.companyname}</div>
                     </div>
                     <div className="item-size">
-                        <div className="size"><b>Size:</b> {item.size}</div>
-                        <div className="color" style={{ display: 'flex', alignItems: 'center' }}><b>Color:</b><div style={{ width: '20px', height: '20px', marginLeft: '20px', backgroundColor: item.color, border: '1px' }} /> </div>
+                        <div className="size">Size:{item.size}</div>
+                        <div className="color" style={{ display: 'flex', alignItems: 'center' }}>Color:<div style={{ width: '12px', height: '12px', marginLeft: '20px', backgroundColor: item.color, border: '1px' }} /> </div>
                         <div className="serial">Serial:{item.serial}</div>
                     </div>
                 </div>

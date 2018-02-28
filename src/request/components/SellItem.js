@@ -82,8 +82,7 @@ class SellItem extends Component {
         >
           {
             selectedItemIndex == 0 ?
-              <div><
-                div className="popup-request-search">
+              <div><div className="popup-request-search">
                 <SearchInput className="popup-search-input" onChange={this.searchUpdated} />
               </div>
                 <div className="replace-list">
@@ -99,7 +98,7 @@ class SellItem extends Component {
               :
               // <div>{ data[selectedItemIndex].itemname }</div>
               <div className="edit-sell-item">
-                <img src={require("../../shared/img/back.png")} style={{ marginLeft: '20px', marginTop: '20px', marginBottom: '10px' }} onClick={() => this.backClick()} />
+                <img src={require("../../shared/img/back.png")} style={{ marginLeft: '20px', marginTop: '10px', marginBottom: '10px' }} onClick={() => this.backClick()} />
 
                 <Carousel autoplay>
                   <div className="image-item">
