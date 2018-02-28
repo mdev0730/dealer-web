@@ -87,13 +87,11 @@
         min-width: 22px;
         border-radius: 11px;
         border: 1px solid #BDC3D0;
-        cursor: pointer;
       }
       .circle1 {
         width: 22px;
         height: 22px;
         min-width: 22px;
-        cursor: pointer;
       }
       .replace {
         width: 397px;
@@ -178,4 +176,8 @@
         }
       }
     }
+  }
+  .line {
+    text-decoration: line-through red;
+    margin-bottom: 0px;
   }

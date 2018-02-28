@@ -65,7 +65,12 @@ class QuotItem extends Component {
           <div className="count">{item.count}</div>
         </div>
         <div className="item-name">
+          {
+            item.out ? 
+          <div className="name"><p className="line">{item.itemname}</p></div>
+          :
           <div className="name">{item.itemname}</div>
+          }
           <div className="group">{item.companyname}</div>
         </div>
         <div className="item-size">
@@ -73,17 +78,17 @@ class QuotItem extends Component {
           <div className="color" style={{ display: 'flex', alignItems: 'center' }}><b>Color:</b><div style={{ width: '20px', height: '20px', marginLeft: '20px', backgroundColor: item.color, border: '1px' }} /> </div>
           <div className="serial">Serial:{item.serial}</div>
         </div>
-        <div onClick={() => this.onSelect()} style={{ display: 'flex' }}>
+        <div style={{ display: 'flex' }}>
           <div className="out-stock">Out of stock:</div>
           {
-            !this.state.selected ?
+            !item.out ?
               <div className="circle" ></div>
               :
               <div className="circle1" ><img src={require('../../shared/img/checked.png')} /></div>
           }
         </div>
         {
-          !this.state.selected ? <div className="price-total">
+          !item.out ? <div className="price-total">
             <div className="price">
               <div>Price per unit:</div>
               <div className="price-val">{item.price} NIS</div>
@@ -95,7 +100,7 @@ class QuotItem extends Component {
             </div>
           </div> :
             <div className="price-total1">
-              <div className="item-replace">Replaced</div>
+              <div className="item-replace">Replaced to</div>
             </div>
         }
       </div>

@@ -7,13 +7,14 @@ import gql from 'graphql-tag';
 
 import itemHeader from '../request/components/itemheader';
 import CompanyItem from '../shared/components/CompanyItem';
-import SellItem from '../request/components/SellItem';
+import QuotItem from '../bid/components/QuotItem';
 
 class History extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      
       sellitems: [
         {
           id: 1,
@@ -24,7 +25,8 @@ class History extends Component {
           color: '#666666',
           serial: '434343434',
           price: '10.25',
-          count: '1'
+          count: '1',
+          out: false
         },
         {
           id: 2,
@@ -35,7 +37,8 @@ class History extends Component {
           color: '#222222',
           serial: '434343434',
           price: '10.25',
-          count: '21'
+          count: '21',
+          out: true
         },
         {
           id: 3,
@@ -46,10 +49,11 @@ class History extends Component {
           color: '#00ff33',
           serial: '434343434',
           price: '10.25',
-          count: '23'
+          count: '23',
+          out: false
         },
         {
-          id: 6,
+          id: 4,
           itemname: 'External slit8',
           companyname: 'Tambour',
           itemcunt: '10',
@@ -57,12 +61,61 @@ class History extends Component {
           color: '#ff00ff',
           serial: '434343434',
           price: '10.25',
-          count: '26'
+          count: '26',
+          out: false
+        },
+        {
+          id: 5,
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '10.25',
+          count: '23',
+          out: true
+        },
+        {
+          id: 6,
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '10.25',
+          count: '23',
+          out: false
         }
       ],
       companies: [
         {
           name: 'test',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
+          productName: 'Duplex',
+          deliveryDate: new Date(),
+          createdAt: new Date()
+        },
+        {
+          name: 'test123',
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date()
@@ -157,6 +210,16 @@ class History extends Component {
                 <div><b>Payment:</b> By credit card</div>
                 <div><b>Remark:</b> Half payment on the card and the rest on checks every month</div>
               </div>
+              <div className="contact">
+                <div className="contact-btt">
+                  <img src={require('../shared/img/contact.png')}/>
+                  <p>Contact</p>
+                </div>
+                <div className="email-btt">
+                  <img src={require('../shared/img/email.png')}/>
+                  <p>Email</p>
+                </div>
+              </div>
             </div>
             <div className="colors-paint">
               <div className="data">Colors and paint</div>
@@ -165,7 +228,7 @@ class History extends Component {
               {
                 sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={sell} data={sellitems} key={index} />
+                    <QuotItem item={sell} data={sellitems} key={index} />
                   )
                 })
               }

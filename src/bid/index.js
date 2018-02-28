@@ -24,7 +24,8 @@ class Bid extends Component {
           color: '#666666',
           serial: '434343434',
           price: '10.25',
-          count: '1'
+          count: '1',
+          out: true
         },
         {
           id: 2,
@@ -35,7 +36,8 @@ class Bid extends Component {
           color: '#222222',
           serial: '434343434',
           price: '10.25',
-          count: '21'
+          count: '21',
+          out: false
         },
         {
           id: 3,
@@ -46,7 +48,8 @@ class Bid extends Component {
           color: '#00ff33',
           serial: '434343434',
           price: '10.25',
-          count: '23'
+          count: '23',
+          out: false
         },
         {
           id: 6,
@@ -57,7 +60,8 @@ class Bid extends Component {
           color: '#ff00ff',
           serial: '434343434',
           price: '10.25',
-          count: '26'
+          count: '26',
+          out: false
         }
       ],
       companies: [
