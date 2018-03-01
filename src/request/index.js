@@ -7,12 +7,14 @@ import gql from 'graphql-tag';
 import itemHeader from './components/itemheader';
 import CompanyItem from '../shared/components/CompanyItem';
 import SellItem from './components/SellItem';
+var NumberFormat = require('react-number-format');
 
 class Request extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      discountVal: 0,
       sellitems: [
         {
           id: 1,
@@ -176,6 +178,14 @@ class Request extends Component {
   replaceRequest() {
 
   }
+  getTotalAmount =() => {
+    var totalAmount = 0;
+    for(var i = 0; i < this.state.sellitems.length; i++){
+      totalAmount += (this.state.sellitems[i].price * this.state.sellitems[i].count);
+    }
+    console.log(totalAmount);
+    return totalAmount;
+  }
   handleOk = () => {
     this.setState({
       visible: false,
@@ -196,7 +206,7 @@ class Request extends Component {
     });
   }
   render() {
-    const { companies, sellitems, visible } = this.state;
+    const { companies, sellitems, visible, discountVal } = this.state;
     const { fetchPlaces: { loading, allPlaces } } = this.props;
     if (loading) {
       return <div className="loader-indicator" />;
@@ -251,16 +261,21 @@ class Request extends Component {
           <div className="total-view" style={{ backgroundImage: `url(${require('../shared/img/background_bottom.png')})`, backgroundRepeat: 'repeat-x', backgroundSize: 'auto' }}>
             <div className="total-left-view">
               <div style={{ display: 'flex' }}>
-                Total: <div className="price-val">00.00 NIS</div>
+                Total: <div className="price-val">{this.getTotalAmount().toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                Discount: <div className="price-val">0%</div>
+                Discount: <NumberFormat format="##%" className="price-val" value={this.state.discountVal}
+                onChange={(e, value) => {
+                  const formattedValue = e.target.value;
+                  var str = formattedValue.substring(0, formattedValue.length - 1);
+                  this.setState({discountVal: str})
+                }}/>
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">00.00NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * (1 - this.state.discountVal/100)).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">00.00 NIS</div>
+                VAT(17%): <div className="val">{((this.getTotalAmount() * (1 - this.state.discountVal/100))*0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="totla-right-view is-right">
