@@ -216,16 +216,16 @@ class Bid extends Component {
                 Discount: <div className="price-val-normal">10%</div>
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">{(this.getTotalAmount() * 0.1).toLocaleString()} NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * 0.9).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.1 * 0.17).toLocaleString()} NIS</div>
+                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.9 * 0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                 <div className="total-payment">Total payment:</div>
-                <div className="payment-val"> 00.00 </div>
+                <div className="payment-val"> {(this.getTotalAmount() * 0.9 * 1.17).toLocaleString()}</div>
                 <div className="payment-type"> NIS </div>
               </div>
             </div>

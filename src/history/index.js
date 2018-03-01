@@ -72,8 +72,8 @@ class History extends Component {
           size: 'Medium',
           color: '#00ff33',
           serial: '434343434',
-          price: '10.25',
-          count: '23',
+          price: '12',
+          count: '99',
           out: true
         },
         {
@@ -84,8 +84,44 @@ class History extends Component {
           size: 'Medium',
           color: '#00ff33',
           serial: '434343434',
-          price: '10.25',
-          count: '23',
+          price: '134',
+          count: '2',
+          out: true
+        },
+        {
+          id: 7,
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '15',
+          count: '20',
+          out: true
+        },
+        {
+          id: 8,
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '1034',
+          count: '12',
+          out: true
+        },
+        {
+          id: 9,
+          itemname: 'External slit3',
+          companyname: 'Tambour',
+          itemcunt: '10',
+          size: 'Medium',
+          color: '#00ff33',
+          serial: '434343434',
+          price: '134',
+          count: '4',
           out: false
         }
       ],
@@ -251,16 +287,16 @@ class History extends Component {
                 Discount: <div className="price-val-normal">10%</div>
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">{(this.getTotalAmount() * 0.1).toLocaleString()} NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * 0.9).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.1 * 0.17).toLocaleString()} NIS</div>
+                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.9 * 0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                 <div className="total-payment">Total payment:</div>
-                <div className="payment-val"> 00.00 </div>
+                <div className="payment-val"> {(this.getTotalAmount() * 0.9 * 1.17).toLocaleString()} </div>
                 <div className="payment-type"> NIS </div>
               </div>
             </div>

@@ -3,6 +3,7 @@ import { Modal, Button, Carousel } from 'antd';
 import SearchInput, { createFilter } from 'react-search-input'
 import CompanyItem from '../../shared/components/CompanyItem';
 import ReplaceListItem from '../components/ReplaceListItem';
+var NumberFormat = require('react-number-format');
 
 class SellItem extends Component {
   constructor(props) {
@@ -165,7 +166,11 @@ class SellItem extends Component {
           !this.state.selected ? <div className="price-total">
             <div className="price">
               <div>Price per unit:</div>
-              <div className="price-val">{item.price} NIS</div>
+              <NumberFormat className="price-val" value={item.price}
+                onChange={(e, value) => {
+                  const formattedValue = e.target.value;
+                  item.price = formattedValue;                  
+                }}/>
             </div>
             <div className="divider" />
             <div className="price">

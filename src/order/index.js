@@ -9,6 +9,7 @@ import 'react-select/dist/react-select.css';
 import itemHeader from '../request/components/itemheader';
 import CompanyItemOrder from '../shared/components/CompanyItemOrder';
 import QuotItem from '../bid/components/QuotItem';
+var NumberFormat = require('react-number-format');
 
 class Order extends Component {
   constructor(props) {
@@ -154,7 +155,7 @@ class Order extends Component {
           deliveryDate: new Date(),
           createdAt: new Date(),
           paid: false,
-          supplied: false
+          supplied: true
         },
         {
           name: 'test123',
@@ -185,7 +186,7 @@ class Order extends Component {
           productName: 'Duplex',
           deliveryDate: new Date(),
           createdAt: new Date(),
-          paid: false,
+          paid: true,
           supplied: false
         }
       ]
@@ -335,22 +336,25 @@ class Order extends Component {
                 Discount: <div className="price-val-normal">10%</div>
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">{(this.getTotalAmount() * 0.1).toLocaleString()} NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * 0.9).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.1 * 0.17).toLocaleString()} NIS</div>
+                VAT(17%): <div className="val">{(this.getTotalAmount() * 0.9 * 0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="receive-payment-view is-center">
-              <p>Paid:5,000.00 NIS</p>
-              <p>left to pay: 4,123.00 NIS</p>
-              <div className="receive-payment-val is-center"> 00.00 NIS</div>
+              <p>Paid:1,000.00 NIS</p>
+              <p>left to pay: 262.81 NIS</p>
+              <NumberFormat className="receive-payment-val" value={this.state.discountVal}
+                onChange={(e, value) => {
+                  const formattedValue = e.target.value;
+                }}/>
                 <Button className="receive-payment-button">Receive Payment</Button>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                 <div className="total-payment">Total payment:</div>
-                <div className="payment-val"> 00.00 </div>
+                <div className="payment-val"> {(this.getTotalAmount() * 0.9 * 1.17).toLocaleString()}</div>
                 <div className="payment-type"> NIS </div>
               </div>
             </div>
