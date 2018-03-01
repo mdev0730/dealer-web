@@ -1,13 +1,17 @@
 {
-  "main.css": "static/css/main.ee64fdbb.css",
-  "main.css.map": "static/css/main.ee64fdbb.css.map",
-  "main.js": "static/js/main.94644b23.js",
-  "main.js.map": "static/js/main.94644b23.js.map",
+  "main.css": "static/css/main.f0495cfb.css",
+  "main.css.map": "static/css/main.f0495cfb.css.map",
+  "main.js": "static/js/main.d5df1a64.js",
+  "main.js.map": "static/js/main.d5df1a64.js.map",
   "static/media/Comfortaa-Light.ttf": "static/media/Comfortaa-Light.30790de0.ttf",
   "static/media/authBack.png": "static/media/authBack.732f00e5.png",
   "static/media/authRegist.png": "static/media/authRegist.ea484ba7.png",
   "static/media/background_bottom.png": "static/media/background_bottom.5211a41d.png",
+  "static/media/icon_history.png": "static/media/icon_history.0a1c3c47.png",
+  "static/media/icon_order.png": "static/media/icon_order.4814b2b5.png",
+  "static/media/icon_quotes.png": "static/media/icon_quotes.df4a1558.png",
   "static/media/logo.png": "static/media/logo.6c559606.png",
   "static/media/paypal.png": "static/media/paypal.0e65ecc2.png",
+  "static/media/success.png": "static/media/success.551846c1.png",
   "static/media/visa.png": "static/media/visa.086c5099.png"
 }
