@@ -14,8 +14,14 @@ class SellItem extends Component {
       visible: false,
       confirmLoading: false,
       selectedItemIndex: 0,
+      item: props.item
     };
     this.onSelect = this.onSelect.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.item !== this.props.item) {
+      this.setState({ item: nextProps.item });
+    }
   }
   showModal = () => {
     this.setState({
@@ -58,7 +64,8 @@ class SellItem extends Component {
 
   render() {
     const { visible, confirmLoading, selectedItemIndex } = this.state;
-    const { item, data } = this.props;
+    const { data } = this.props;
+    const { item } = this.state;
     const totalval = item.price * item.count;
     return (
       <div className="content-item" id="contentitem">
@@ -169,8 +176,11 @@ class SellItem extends Component {
               <NumberFormat className="price-val" value={item.price}
                 onChange={(e, value) => {
                   const formattedValue = e.target.value;
-                  item.price = formattedValue;                  
-                }}/>
+                  const item = this.state.item;
+                  item.price = formattedValue;
+                  this.setState({ item });
+                  this.props.updatedItem(item);
+                }} />
             </div>
             <div className="divider" />
             <div className="price">

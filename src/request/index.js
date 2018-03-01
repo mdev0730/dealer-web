@@ -178,9 +178,9 @@ class Request extends Component {
   replaceRequest() {
 
   }
-  getTotalAmount =() => {
+  getTotalAmount = () => {
     var totalAmount = 0;
-    for(var i = 0; i < this.state.sellitems.length; i++){
+    for (var i = 0; i < this.state.sellitems.length; i++) {
       totalAmount += (this.state.sellitems[i].price * this.state.sellitems[i].count);
     }
     console.log(totalAmount);
@@ -252,7 +252,16 @@ class Request extends Component {
               {
                 sellitems.map((sell, index) => {
                   return (
-                    <SellItem item={sell} data={sellitems} key={index} />
+                    <SellItem
+                      item={sell}
+                      data={sellitems}
+                      key={index}
+                      updatedItem={(item) => {
+                        const items = this.state.sellitems;
+                        items[index] = item;
+                        this.setState({ sellItems: items });
+                      }}
+                    />
                   )
                 })
               }
@@ -265,23 +274,23 @@ class Request extends Component {
               </div>
               <div style={{ display: 'flex' }}>
                 Discount: <NumberFormat format="##%" className="price-val" value={this.state.discountVal}
-                onChange={(e, value) => {
-                  const formattedValue = e.target.value;
-                  var str = formattedValue.substring(0, formattedValue.length - 1);
-                  this.setState({discountVal: str})
-                }}/>
+                  onChange={(e, value) => {
+                    const formattedValue = e.target.value;
+                    var str = formattedValue.substring(0, formattedValue.length - 1);
+                    this.setState({ discountVal: str })
+                  }} />
               </div>
               <div style={{ display: 'flex' }}>
-                After discount: <div className="val">{(this.getTotalAmount() * (1 - this.state.discountVal/100)).toLocaleString()} NIS</div>
+                After discount: <div className="val">{(this.getTotalAmount() * (1 - this.state.discountVal / 100)).toLocaleString()} NIS</div>
               </div>
               <div style={{ display: 'flex' }}>
-                VAT(17%): <div className="val">{((this.getTotalAmount() * (1 - this.state.discountVal/100))*0.17).toLocaleString()} NIS</div>
+                VAT(17%): <div className="val">{((this.getTotalAmount() * (1 - this.state.discountVal / 100)) * 0.17).toLocaleString()} NIS</div>
               </div>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                 <div className="total-payment">Total payment:</div>
-                <div className="payment-val"> 00.00 </div>
+                <div className="payment-val"> {((this.getTotalAmount() * (1 - this.state.discountVal / 100)) * 1.17).toLocaleString()}  </div>
                 <div className="payment-type"> NIS </div>
               </div>
             </div>
