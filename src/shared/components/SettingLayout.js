@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from 'antd';
-import { graphql, compose } from 'react-apollo';
-import gql from 'graphql-tag';
 
 import Header from './Header';
 import SettingScreen from '../../setting';
@@ -17,30 +15,6 @@ class SettingLayout extends Component {
   }
 
   componentDidMount() {
-    this.updateUserSubscription = this.props.fetchUser.subscribeToMore({
-      document: gql`
-        subscription {
-          User(filter: {
-            mutation_in: [UPDATED]
-          }) {
-            mutation
-            node {
-              id
-              displayName
-              email
-            }
-          }
-        }
-      `,
-      updateQuery: (previousState, { subscriptionData }) => {
-        const user = subscriptionData.data.User.node;
-        if (previousState.User.id === user.id) {
-          return { User: user };
-        }
-        return previousState;
-      },
-      onError: (err) => console.error(err),
-    });
   }
 
   render() {
@@ -59,40 +33,7 @@ class SettingLayout extends Component {
   }
 }
 
-const LOGGED_IN_USER_QUERY = gql`
-  query LoggedInUserQuery {
-    loggedInUser {
-      id
-    }
-  }
-`
 
-const FETCH_USER = gql`
-  query FetchUser($id: ID!) {
-    User(id: $id) {
-      id
-      displayName
-      email
-      group
-    }
-  }
-`
-
-const SettingLayoutComponent = compose(
-  graphql(LOGGED_IN_USER_QUERY, {
-    name: 'loggedInUserQuery',
-    options: {
-      fetchPolicy: 'network-only',
-    }
-  }),
-  graphql(FETCH_USER, {
-    name: 'fetchUser',
-    options: (props) => ({
-      variables: {
-        // id: props.loggedInUserQuery.loggedInUser.id,
-      },
-    })
-  }),
-)(SettingLayout);
+const SettingLayoutComponent = SettingLayout;
 
 export default SettingLayoutComponent;

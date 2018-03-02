@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from 'antd';
-import { graphql, compose } from 'react-apollo';
-import gql from 'graphql-tag';
 
 import Sidebar from './Sidebar';
 import Header from './Header';
@@ -13,8 +11,8 @@ import OrderScreen from '../../order';
 
 const { Content } = Layout;
 
-const RouteWithData = ({ component: Component, user, search, ...rest }) => (
-  <Route exact {...rest} render={props => (<Component user={user} search={search} {...props} />)} />
+const RouteWithData = ({ component: Component, user, ...rest }) => (
+  <Route exact {...rest} render={props => (<Component {...props} />)} />
 )
 
 class MainLayout extends Component {
@@ -25,48 +23,21 @@ class MainLayout extends Component {
   }
 
   componentDidMount() {
-    this.updateUserSubscription = this.props.fetchUser.subscribeToMore({
-      document: gql`
-        subscription {
-          User(filter: {
-            mutation_in: [UPDATED]
-          }) {
-            mutation
-            node {
-              id
-              displayName
-              email
-            }
-          }
-        }
-      `,
-      updateQuery: (previousState, { subscriptionData }) => {
-        const user = subscriptionData.data.User.node;
-        if (previousState.User.id === user.id) {
-          return { User: user };
-        }
-        return previousState;
-      },
-      onError: (err) => console.error(err),
-    });
   }
-
   render() {
-    const { fetchUser } = this.props;
-
     // if (loggedInUserQuery.loading || fetchUser.loading) return null;
 
     return (
       <Layout className="main-layout">
       <Header />
         <Layout>
-        <Sidebar user={fetchUser.User} />
+        <Sidebar/>
           <Layout>
               <Content>
                 <RouteWithData exact path="/bid" component={BidScreen} />
                 <RouteWithData exact path="/order" component={OrderScreen} />
                 <RouteWithData exact path="/history" component={HistoryScreen} />
-                <RouteWithData exact path="/request" component={RequestScreen} user={fetchUser.User} search={this.state.search} />
+                <RouteWithData exact path="/request" component={RequestScreen}/>
                 {/* <Route exact path="/setting" component={SettingScreen}/> */}
               </Content>
           </Layout>
@@ -76,40 +47,6 @@ class MainLayout extends Component {
   }
 }
 
-const LOGGED_IN_USER_QUERY = gql`
-  query LoggedInUserQuery {
-    loggedInUser {
-      id
-    }
-  }
-`
-
-const FETCH_USER = gql`
-  query FetchUser($id: ID!) {
-    User(id: $id) {
-      id
-      displayName
-      email
-      group
-    }
-  }
-`
-
-const MainLayoutComponent = compose(
-  graphql(LOGGED_IN_USER_QUERY, {
-    name: 'loggedInUserQuery',
-    options: {
-      fetchPolicy: 'network-only',
-    }
-  }),
-  graphql(FETCH_USER, {
-    name: 'fetchUser',
-    options: (props) => ({
-      variables: {
-        // id: props.loggedInUserQuery.loggedInUser.id,
-      },
-    })
-  }),
-)(MainLayout);
+const MainLayoutComponent = MainLayout;
 
 export default MainLayoutComponent;

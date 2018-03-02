@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 
 import MainLayout from './shared/components/MainLayout';
 import SettingLayout from './shared/components/SettingLayout';
@@ -22,10 +20,6 @@ class AppRouter extends Component {
   }
 
   render() {
-    // if (this.props.loggedInUserQuery.loading) {
-    //   return <div className="loader-indicator" />;
-    // }
-
     const appRouter = (
       <Switch>
         <Route path="/request" component={MainLayout} />
@@ -39,30 +33,12 @@ class AppRouter extends Component {
         <Route path='/' component={LoginScreen} />
       </Switch>
     );
-    // const authRouter = (
-    //   <Switch>
-    //     <Route path='/signin' component={LoginScreen} />
-    //     <Route path='/signup' component={SignupScreen} />
-    //   </Switch>
-    // );
     return appRouter;
     // return this.onLoggedIn() ? appRouter : authRouter;
   }
 }
 
-const LOGGED_IN_USER_QUERY = gql`
-  query LoggedInUserQuery {
-    loggedInUser {
-      id
-    }
-  }
-`
 
-const AppRouterComponent = graphql(LOGGED_IN_USER_QUERY, {
-  name: 'loggedInUserQuery',
-  options: {
-    fetchPolicy: 'network-only',
-  }
-})(AppRouter);
+// const AppRouterComponent = AppRouter;
 
-export default AppRouterComponent;
+export default AppRouter;
