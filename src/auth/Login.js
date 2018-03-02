@@ -18,14 +18,8 @@ class Login extends Component {
   }
 
   handleSubmit(values) {
-    localStorage.setItem('graphcoolToken', "aaaa");
+    localStorage.setItem('firebaseToken', "aaaa");
     window.location.href = "/request";
-    // return this.props.authenticateUserMutation({ variables: { ...values, domain: window.location.hostname } })
-    //   .then((res) => {
-    //     localStorage.setItem('graphcoolToken', res.data.authenticateUser.token);
-    //     window.location.href = "/";
-    //   })
-    //   .catch(parseFormErrors);
   }
   gotoRegister(){
     <Switch>

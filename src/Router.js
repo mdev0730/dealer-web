@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import {init as firebaseInit} from './shared/components/firebase'
+import {Provider} from 'react-redux'
+import configureStore from './shared/components/ConfigureStore'
 import MainLayout from './shared/components/MainLayout';
 import SettingLayout from './shared/components/SettingLayout';
 import LoginScreen from './auth/Login';
@@ -10,7 +13,8 @@ import AboutLayout from './shared/components/AboutLayout';
 class AppRouter extends Component {
   constructor(props) {
     super(props);
-
+    firebaseInit();
+    this.store = configureStore()
     this.onLoggedIn = this.onLoggedIn.bind(this);
   }
 

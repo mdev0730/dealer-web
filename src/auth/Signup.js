@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
 import { Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Logo from '../shared/img/mark-white.png';
@@ -52,19 +50,6 @@ class Signup extends Component {
   }
 }
 
-const AUTHENTICATE_USER_MUTATION = gql`
-  mutation AuthenticateUserMutation ($email: String!, $password: String!, $domain: String) { 
-    authenticateUser(email: $email, password: $password, domain: $domain) {
-      token
-    }
-  }
-`
-
-const SignupScreen = graphql(AUTHENTICATE_USER_MUTATION, {
-  name: 'authenticateUserMutation',
-  options: {
-    fetchPolicy: 'no-cache',
-  }
-})(Signup);
+const SignupScreen = Signup;
 
 export default SignupScreen;

@@ -7,7 +7,7 @@ import AppRouter from './Router';
 import { parseError } from './shared/utils/parse_errors';
 
 const authToken = () => {
-  const token = localStorage.getItem("graphcoolToken");
+  const token = localStorage.getItem("firebaseToken");
   return token ? `Bearer ${token}` : null;
 };
 
