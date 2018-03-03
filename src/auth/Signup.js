@@ -21,12 +21,7 @@ class Signup extends Component {
   }
 
   handleSubmit(values) {
-    return this.props.authenticateUserMutation({ variables: { ...values, domain: window.location.hostname } })
-      .then((res) => {
-        localStorage.setItem('graphcoolToken', res.data.authenticateUser.token);
-        window.location.href = "/";
-      })
-      .catch(parseFormErrors);
+    
   }
 
   render() {

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Breadcrumb, Table, Button, Icon } from 'antd';
 import { Link } from 'react-router-dom';
-import { graphql } from 'react-apollo';
 import SearchInput, { createFilter } from 'react-search-input'
-import gql from 'graphql-tag';
-
 import itemHeader from '../request/components/itemheader';
 import CompanyItem from '../shared/components/CompanyItem';
 import QuotItem from '../bid/components/QuotItem';
