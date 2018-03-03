@@ -7,9 +7,10 @@
         line-height: normal;
         font-weight: bold;
         font-size: 12px;
-        text-align: center;        
+        text-align: left;        
         color: #1A9FFF;
-        margin-left: 5px;
+        margin-left: 12px;
+        width: 70px;
     }
     .filter-name {
         // width: 139px;
@@ -20,11 +21,11 @@
         text-align: center;        
         color: #1A9FFF;
         input {
-            width: 80px;
+            width: 180px;
         }
     }
     .select-sort {
-        width: 85px;
+        width: 185px;
         .Select-control {
             border: none;
             .Select-value {

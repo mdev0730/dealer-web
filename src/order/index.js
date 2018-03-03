@@ -264,6 +264,8 @@ class Order extends Component {
               value={this.state.sort_label}
               valueRenderer={this.renderValue}
             />
+          </div>
+          <div className="filter-view">
             <div className="sort-name">Filter by:</div>
             <Select
               className="select-sort"
@@ -346,8 +348,8 @@ class Order extends Component {
               <NumberFormat className="receive-payment-val" value={this.state.discountVal}
                 onChange={(e, value) => {
                   const formattedValue = e.target.value;
-                }}/>
-                <Button className="receive-payment-button">Receive Payment</Button>
+                }} />
+              <Button className="receive-payment-button">Receive Payment</Button>
             </div>
             <div className="totla-right-view is-right">
               <div className="right-image" style={{ backgroundImage: `url(${require('../shared/img/total_discount.png')})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
