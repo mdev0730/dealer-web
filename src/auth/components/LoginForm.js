@@ -22,7 +22,7 @@ class LoginForm extends Component {
 
         {error && <FormItem><Alert type="error" message={error} closable /></FormItem>}
 
-        <div className="login-form-title" color="#394158" align="center" style={{ marginTop: 20, marginBottom:40  }}>Login</div>
+        <div className="login-form-title" align="center" style={{ marginTop: 20, marginBottom:40  }}>Login</div>
         <Field
           name="email"
           label="Name"
